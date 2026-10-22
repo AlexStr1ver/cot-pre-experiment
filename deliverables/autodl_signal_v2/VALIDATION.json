@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "plan_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "collector_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "actual_snapshot_plan_collector_integration": {
+    "passed": true,
+    "cases": [
+      1,
+      6,
+      8
+    ],
+    "positions": 9,
+    "probe_instruction_tokens": 6,
+    "probe_window_queries": 12
+  },
+  "failed_GPU_prerequisite_path": {
+    "nonzero_exit_preserved": true,
+    "code_logs_plan_summary_return_zip_CRC_pass": true,
+    "zero_measurement_reported": true,
+    "no_false_GPU_success_claim": true
+  },
+  "source_protection": {
+    "autodl_archive_files_byte_checked": 404,
+    "changed": 0,
+    "v1_core_sha256": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66"
+  },
+  "CPU_validation_environment": {
+    "python": "3.12.14",
+    "torch": "2.6.0+cpu",
+    "transformers": "4.51.3"
+  },
+  "v1_user_GPU_result": {
+    "accepted": true,
+    "measured_positions": 4,
+    "questions": 2,
+    "all_reported_full_chunk_reference_H_and_logit_differences": 0,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti"
+  },
+  "v2_actual_checkpoint_GPU_run": false,
+  "v2_online_controller": false,
+  "v2_full_ASAG_reproduction": false,
+  "note": "v1 short-prefix results were returned by user and audited; v2 CPU tests and plan/runner checks passed, but v2 long-prefix GPU measurement still awaits AutoDL execution."
+}
