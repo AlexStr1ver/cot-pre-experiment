@@ -1,0 +1,11 @@
+{
+  "review_date_beijing": "2026-10-24",
+  "input_zip_sha256": "dde2f879e72427912b3f85e5f7fba0d877f0bbfb299ef37d785d863725caf03a",
+  "input_zip_crc_passed": true,
+  "reproducible_read_only_audit": "audit_return.py passed",
+  "original_code_package_unchanged": true,
+  "actual_tokenizer_and_original_native20_check": "A/B exact input IDs, reset IDs, text decoding and final EOS independently passed",
+  "new_model_inference_performed_during_review": false,
+  "next_execution": "Use original unchanged v3 saved code to resume main from this successful smoke; no additional upload required",
+  "scientific_result": "Both wrong, no demonstrated quality-preserving efficiency or H+C advantage"
+}

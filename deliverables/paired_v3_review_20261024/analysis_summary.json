@@ -1,0 +1,51 @@
+{
+  "review_date_beijing": "2026-10-24",
+  "audit_passed": true,
+  "execution": "completed smoke; main18 not executed in this upload",
+  "checked_package_files": 29,
+  "fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+  "completed_action_pairs": 1,
+  "completed_action_branches": 2,
+  "numerical_audit_cases": [
+    1,
+    6,
+    8
+  ],
+  "max_chunk_relative_H_difference": 7.196447927944875e-08,
+  "max_chunk_mean_logit_difference": 2.6401467039249837e-06,
+  "max_chunk_probe_token_probability_difference": 8.344650268554688e-07,
+  "cross_phase2_H_and_probe_probability_differences": 0,
+  "A": {
+    "pred_boxed": "4",
+    "answer_completed": true,
+    "extra_generated_tokens": 3951,
+    "branch_wall_seconds": 95.68167432397604,
+    "summary_generated_tokens_total": 370,
+    "prefill_tokens_total": 4582,
+    "peak_allocated_gib": 7.058216571807861,
+    "executed_summary_restarts": 1
+  },
+  "B": {
+    "pred_boxed": "4",
+    "answer_completed": true,
+    "extra_generated_tokens": 2635,
+    "branch_wall_seconds": 62.86350524332374,
+    "summary_generated_tokens_total": 442,
+    "prefill_tokens_total": 4660,
+    "peak_allocated_gib": 6.948007583618164,
+    "executed_summary_restarts": 1
+  },
+  "reference_answer": "6",
+  "correct_A": false,
+  "correct_B": false,
+  "B_minus_A_generated_tokens": -1316,
+  "relative_generated_token_reduction": 0.33308023285244237,
+  "relative_branch_wall_reduction": 0.3429932566766202,
+  "next_main_reused_branches": 2,
+  "next_main_new_branches": 16,
+  "next_main_max_new_tokens": 226530,
+  "next_main_max_tokens_at_smoke_throughput_minutes": 90.88784170305806,
+  "timing_caveat": "Token-cap extrapolation is not a measured duration or wall-clock upper bound; excludes reload/audits and longer-context throughput changes.",
+  "conclusion": "Engineering pass; no demonstrated quality-preserving benefit or H+C action selection advantage. Reuse smoke and complete frozen main18.",
+  "manual_validation": "Reference 6 independently checked: omitted quadratics x^2-4 and x^2-1 both satisfy the stated condition. Tokenizer/base/reset fidelity was separately audited against local original native20 and actual tokenizer."
+}
