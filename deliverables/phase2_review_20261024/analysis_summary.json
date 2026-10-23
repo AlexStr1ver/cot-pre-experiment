@@ -1,0 +1,74 @@
+{
+  "grading_method": "Exact integer match against saved original reference; no learned grader",
+  "points": 9,
+  "distinct_questions": 3,
+  "correct_probes": 2,
+  "closed_nonempty_probes": 9,
+  "correct_points": [
+    [
+      8,
+      2055
+    ],
+    [
+      8,
+      4173
+    ]
+  ],
+  "rows_are_within_question_correlated_development_observations": true,
+  "minimum_correct_C": 0.8897623419761658,
+  "maximum_wrong_C": 0.8827180564403534,
+  "partial_content_coverage_points": [
+    [
+      8,
+      2055
+    ],
+    [
+      8,
+      4173
+    ]
+  ],
+  "supplementary_C_definition": "Mean over tokens with any answer-content overlap. Keeps mixed format/content tokens whole. Not a pure-content or calibrated correctness probability, and does not replace primary C.",
+  "precision_comparison": [
+    {
+      "case": 1,
+      "cut": 4103,
+      "window": "raw_tail32",
+      "BF16_H": 939.6429408703598,
+      "FP32_H": 923.1402085660693,
+      "relative_difference_FP32_vs_BF16": -0.017562769416438702,
+      "interpretation": "Same saved prefix, separate runs; not a controlled kernel-cause experiment"
+    },
+    {
+      "case": 1,
+      "cut": 4103,
+      "window": "asag_style_probe_window",
+      "BF16_H": 329.22497789222246,
+      "FP32_H": 322.74011037031477,
+      "relative_difference_FP32_vs_BF16": -0.01969737400675177,
+      "interpretation": "Same saved prefix, separate runs; not a controlled kernel-cause experiment"
+    }
+  ],
+  "measurement_seconds": 13.017868980765343,
+  "attention_seconds": 8.611408764496446,
+  "probe_seconds": 4.406460216268897,
+  "additional_audit_seconds": 4.197101403027773,
+  "model_load_seconds": 3.839775323867798,
+  "max_allocated_gib": 7.102283000946045,
+  "max_reserved_gib": 7.41015625,
+  "source_point_sha256": {
+    "case_001_cut_01041.json": "cba72fc9865fd7b87fba6fae7f81377911b90f77b6844062673271967bfca979",
+    "case_001_cut_02104.json": "d3b85d71db2e839067e683357b69724229d75d9628e864095da3bbc570f7622c",
+    "case_001_cut_04103.json": "41d9087124436884cfed04218988216203848fe033dffd09057683d9271ce362",
+    "case_006_cut_01055.json": "90a41d64caa566435e92cb37a32ea8d414ee837866886bc7bba4d14574e3630e",
+    "case_006_cut_02092.json": "bf47739596e940dc7dacd8bd9bc7f2d9bde2fc975ce8ff3e9e0dadbdfc59019e",
+    "case_006_cut_04203.json": "5c0ba86a30dbc76350508d42a29102a4425609e0b8422d1147f2e886487db628",
+    "case_008_cut_01084.json": "336b1efbd0a65bb7921f9818607508eaf30d9a61457c4aab6053662046ba63e2",
+    "case_008_cut_02055.json": "63daab5d84bc25c3451a698691239be580bdfdf93c78514ead9127d010e8806d",
+    "case_008_cut_04173.json": "ceb76c5ba6f92949589b9c873b01686ecbda507ae14ac5722a5bbfff2150fe83"
+  },
+  "case8_later_C_drop": {
+    "drop": 0.08451515436172485,
+    "closure_contribution_to_drop": 0.07738991578420003,
+    "closure_fraction_of_drop": 0.915692769760216
+  }
+}

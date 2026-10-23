@@ -1,0 +1,20 @@
+{
+  "date_beijing": "2026-10-24",
+  "returned_zip_sha256": "5ad597fb28bf8a7ab4b31c5f0ea06794d9d96f558ccf699970bc4e6fb0cf26bb",
+  "zip_CRC_passed": true,
+  "engineering_audit_executed_twice_same_result": true,
+  "portable_audit_CLI_executed": true,
+  "analysis_script_executed": true,
+  "source_result_reads_only": true,
+  "GPU_rerun_by_this_review": false,
+  "GPU_success_evidence": "User-returned FP32 run: exit0, all9points, samepublishedcode, validatedlogs/metrics",
+  "actual_returned_CPU_tests": 18,
+  "prior_cloud_runner_tests_not_repeated_on_AutoDL": 4,
+  "new_GPU_experiment_code_provided": false,
+  "next_protocol_status": "Suggested future protocol, not executed or implemented",
+  "source_scripts_sha256": {
+    "audit_engineering.py": "b3b490ce422ee2af50ee2d6c9151b669c090a7a5d087cf5499e44a41b56cdee7",
+    "analyze_signals.py": "a50edf5b9563bbb31994f6bfdc78a2aad8562ef206543b37b7b1251c72431826"
+  },
+  "LF_CSV_rerun_same_values": true
+}

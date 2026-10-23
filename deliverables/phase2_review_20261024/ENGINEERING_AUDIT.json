@@ -1,0 +1,101 @@
+{
+  "all_assertions_passed": true,
+  "returned_code_identical_to_release": {
+    "checksums.sha256": true,
+    "collect_phase2.py": true,
+    "launch_phase2.sh": true,
+    "prepare_plan.py": true,
+    "run_phase2.sh": true,
+    "status_phase2.py": true,
+    "test_collect_phase2.py": true,
+    "test_prepare_plan.py": true,
+    "v1_core.py": true
+  },
+  "actual_AutoDL_tests": {
+    "planner": 7,
+    "collector": 11,
+    "total": 18,
+    "runner_tests_not_reexecuted_on_AutoDL": 4
+  },
+  "prefixes_validated_against_original_native20": 9,
+  "all_nine_point_arithmetic_consistent": true,
+  "plan_byte_identical_to_old_failed_BF16_plan": true,
+  "maximum_attention_row_mass_error": 3.5762786865234375e-07,
+  "max_peak_allocated_gib": 7.102283000946045,
+  "max_peak_reserved_gib": 7.41015625,
+  "measurement_seconds": 13.017868980765343,
+  "audit_seconds": 4.197101403027773,
+  "model_load_seconds": 3.839775323867798,
+  "mean_seconds_per_point": 1.4464298867517047,
+  "canary_input_tokens": 4158,
+  "actual_longest_input_tokens": 4358,
+  "actual_longest_case": 6,
+  "canary": {
+    "H_logit_checks": {
+      "passed": true,
+      "signals": {
+        "raw_tail32": {
+          "H_primary": 923.1402085660693,
+          "H_alternative": 923.1402232154628,
+          "H_relative_difference": 1.5869088325180845e-08,
+          "logit_max_absolute_difference": 1.52587890625e-05,
+          "logit_mean_absolute_difference": 2.524956471461337e-06,
+          "logit_mean_signed_difference": -1.6402934761572396e-06,
+          "logit_centered_mean_absolute_difference": 2.163784756703535e-06,
+          "probability_total_variation": 1.1597034443866505e-10,
+          "primary_greedy_token_id": 17,
+          "alternative_greedy_token_id": 17,
+          "greedy_next_token_agrees": true,
+          "primary_greedy_token_probability_difference": 0.0,
+          "gate_passed": true
+        },
+        "asag_style_probe_window": {
+          "H_primary": 322.74011037031477,
+          "H_alternative": 322.7400957234558,
+          "H_relative_difference": 4.538282816813418e-08,
+          "logit_max_absolute_difference": 7.152557373046875e-06,
+          "logit_mean_absolute_difference": 1.3289826483742218e-06,
+          "logit_mean_signed_difference": 8.872889338817913e-07,
+          "logit_centered_mean_absolute_difference": 1.0825998515429092e-06,
+          "probability_total_variation": 3.890582578325308e-10,
+          "primary_greedy_token_id": 90,
+          "alternative_greedy_token_id": 90,
+          "greedy_next_token_agrees": true,
+          "primary_greedy_token_probability_difference": 0.0,
+          "gate_passed": true
+        }
+      },
+      "engineering_gate": {
+        "max_relative_H_difference": 0.01,
+        "max_mean_absolute_logit_difference": 0.05
+      },
+      "interpretation": "Numerical sanity comparison of two bounded chunk sizes. These are engineering tolerances, not entropy/confidence policy thresholds and not a full long-sequence attention reference."
+    },
+    "C_check": {
+      "passed": true,
+      "confidence_available_in_both_probes": true,
+      "generated_token_ids_agree": true,
+      "statuses_agree": true,
+      "max_aligned_token_probability_difference": 6.556510925292969e-07,
+      "C_absolute_difference": 1.5894571936403423e-07,
+      "max_allowed_token_probability_difference": 0.01,
+      "interpretation": "Engineering check of full greedy probes across chunk sizes; matching empty/truncated probes may be numerically consistent but still have C=null and are not usable answers."
+    },
+    "resource_check": {
+      "passed": true,
+      "point_seconds_including_audit": 6.914936283603311,
+      "peak_allocated_fraction_of_total_memory": 0.30073530294398565,
+      "max_seconds": 120.0,
+      "max_memory_fraction": 0.85,
+      "interpretation": "Resource controls evaluated after the canary finishes, not a hard timeout or scientific policy threshold. Includes extra chunk audits; excludes model loading."
+    }
+  },
+  "limitations": [
+    "Only one real-model canary has a second chunk size; largest sequence is another question",
+    "No full long-sequence real-model attention reference, no stored raw attention matrices/logit vectors",
+    "No BF16-vs-FP32 answer/probability agreement calibration across nine points",
+    "Local safetensors revision not independently verified by content hash",
+    "Measurements are offline on three previously explored long trajectories, not nine independent questions",
+    "No actual summary/reset action, predictive-policy evaluation or total-cost comparison"
+  ]
+}
