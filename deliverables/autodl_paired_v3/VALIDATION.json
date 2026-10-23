@@ -1,0 +1,55 @@
+{
+  "date_beijing": "2026-10-24",
+  "cloud_python": "3.12 (AutoDL existing Python3.10 supported by syntax/API)",
+  "cloud_torch": "2.6.0+cpu",
+  "transformers": "4.51.3",
+  "unit_tests": {
+    "passed": 29,
+    "failed": 0,
+    "decoder": 5,
+    "actions": 11,
+    "experiment": 8,
+    "runner": 5,
+    "seconds": 3.554
+  },
+  "AutoDL_wrapper_CPU_tests_expected": 24,
+  "runner_tests_validated_in_cloud_not_repeated_in_every_AutoDL_run": 5,
+  "syntax": "Both shell scripts bash -n passed; Python modules compiled",
+  "real_tokenizer_original_prefix_integration": {
+    "exact_candidate_prefixes": 9,
+    "scripted_action_outputs": 18,
+    "base_chat_template_checked": true,
+    "summary_reset_and_BOS_checks_passed": true,
+    "actual_checkpoint_inference": false
+  },
+  "tiny_Qwen_tests": {
+    "cache_logits_vs_full": "passed",
+    "persistent_decode_and_private_rng": "passed",
+    "real_decoder_action_lifecycle": "passed using random tiny4layer32hidden fixture, six sampledbudgettokens"
+  },
+  "orchestrator_fixture_integration": {
+    "smoke": 2,
+    "main": 18,
+    "main_reused": 2,
+    "main_new": 16,
+    "replicate": 36,
+    "all_fixture_answers_deliberately_wrong": "alljobsstillran; no correctness-dependent expansion",
+    "source_hash_tamper_rejected": true,
+    "failed_numerical_audit_blocks_actions": true
+  },
+  "shell_lifecycle": "success/failure exit, spaces in paths, detach, TERM worker shutdown before archive, no-overwrite repack passed",
+  "actual_runner_missing_CUDA_test": {
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "tests_ran": 24,
+    "partial_summary_logs_code_and_evidence_archived": true,
+    "archive_CRC_passed": true
+  },
+  "unchanged_verified_phase2_modules": {
+    "v1_core.py": true,
+    "collect_phase2.py": true,
+    "prepare_plan.py": true
+  },
+  "new_real_AutoDL_GPU_actions_executed_here": false,
+  "limitation": "Cloud lacks CUDA and realcheckpoint weights. GPUcanaries + fullmodel smoke must runonAutoDL. Packagedphase2evidenceisoldrealrun, not newphase3result."
+}

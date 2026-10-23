@@ -1,0 +1,151 @@
+{
+  "case": 6,
+  "unique_id": "test/geometry/434.json",
+  "target": 2048,
+  "cut": 2092,
+  "input_tokens": 2247,
+  "prefix_token_ids_sha256": "2224eb03b489784996500dea26889ab23f3a4c42a2fd78af3dfa9630de4b5eab",
+  "case_sha256": "ae780cac4a0740c08e3f1a304d3aa13b63c7e1ad24ad4ecd14beb1bb1a70de64",
+  "status": "measured_review_required",
+  "is_canary": false,
+  "stage": "point_completed",
+  "signals": {
+    "raw_tail32": {
+      "entropy_sum_nats": 6429.7445068359375,
+      "H_sum_over_layers_heads_queries_div_log_keys": 833.1543142282314,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 26.036072319632233,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.5424181733256715,
+      "raw_entropy_sum_by_layer_nats": [
+        1338.7791748046875,
+        1535.130615234375,
+        1749.9168701171875,
+        1805.9178466796875
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 32,
+      "keys": 2247,
+      "max_attention_row_mass_error": 2.980232238769531e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 0.38707226514816284
+    },
+    "asag_style_probe_window": {
+      "entropy_sum_nats": 2146.1939086914062,
+      "H_sum_over_layers_heads_queries_div_log_keys": 278.00374626736175,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 23.16697885561348,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.4826453928252808,
+      "raw_entropy_sum_by_layer_nats": [
+        435.2196044921875,
+        513.0575561523438,
+        589.3482666015625,
+        608.5684814453125
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 12,
+      "keys": 2253,
+      "max_attention_row_mass_error": 3.5762786865234375e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 0.3894826974719763
+    }
+  },
+  "probe": {
+    "status": "closed_box_review_required",
+    "answer": "56",
+    "C_mean_selected_token_probability": 0.6955265924334526,
+    "partial_token_probability_mean_diagnostic": 0.6955265924334526,
+    "generated_token_ids": [
+      90,
+      20,
+      21,
+      630
+    ],
+    "selected_token_probabilities": [
+      0.9975616931915283,
+      0.4431008994579315,
+      0.7525302171707153,
+      0.5889135599136353
+    ],
+    "generated_text": "{56}\n\n",
+    "generated_tokens": 4,
+    "inserted_suffix": "\n\n Final Answer\n\n \\boxed",
+    "inserted_suffix_token_ids": [
+      271,
+      13023,
+      21806,
+      271,
+      1124,
+      79075
+    ],
+    "prefill_input_tokens": 2253,
+    "seconds_including_independent_prefill": 0.4230140205472708,
+    "confidence_scope": "All generated tokens up to and including first balanced box closure, including generated opening/closing format and any characters in the closure token. Empty/truncated boxes have C=null. Not semantic correctness probability.",
+    "format_diagnostic": {
+      "token_text_pieces": [
+        "{",
+        "5",
+        "6",
+        "}\n\n"
+      ],
+      "strict_content_C": 0.5978155583143234,
+      "strict_content_definition": "Arithmetic mean only over generated token spans fully inside the first outer boxed answer; opening/closing or mixed delimiter/content tokens excluded. Secondary diagnostic, not official ASAG confidence.",
+      "strict_content_token_indices": [
+        1,
+        2
+      ],
+      "excluded_mixed_token_indices": [],
+      "generated_token_character_spans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "answer_content_generated_character_span": [
+        1,
+        3
+      ],
+      "strict_content_character_coverage": 1.0,
+      "strict_content_token_count": 2,
+      "generated_token_count": 4
+    },
+    "closure_token_probability": 0.5889135599136353
+  },
+  "measurement_seconds_excluding_canary_audit": 1.19956898316741,
+  "peak_allocated_gib": 6.8759050369262695,
+  "peak_reserved_gib": 7.359375,
+  "peak_memory_includes_canary_audit": false,
+  "delta_reference_cut": 1055,
+  "delta_reference_is_first_selected_chronological_point_not_first_ATP": true,
+  "relative_changes": {
+    "raw_tail32": {
+      "normalized_H": 0.10710926671078215,
+      "raw_entropy_sum": 0.2036487702128455,
+      "normalization_denominator_log_keys": 7.717351272185329
+    },
+    "asag_style_probe_window": {
+      "normalized_H": -0.000980626555436014,
+      "raw_entropy_sum": 0.0857521900237031,
+      "normalization_denominator_log_keys": 7.720017940432244
+    }
+  }
+}
