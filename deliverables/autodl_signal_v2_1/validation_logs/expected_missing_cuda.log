@@ -1,0 +1,54 @@
+OUTPUT_DIRECTORY=/workspace/infty-dev/phase2_fix_20261024/runner_real_failure_fixture/infty_signal_phase2fix_ht8TI9Tu
+ASAG_AUDIT_zh.md: OK
+FAILURE_REVIEW.md: OK
+PAPERS_AUDIT_zh.md: OK
+README_zh.md: OK
+collect_phase2.py: OK
+launch_phase2.sh: OK
+prepare_plan.py: OK
+run_phase2.sh: OK
+status_phase2.py: OK
+test_collect_phase2.py: OK
+test_prepare_plan.py: OK
+test_runner.py: OK
+v1_core.py: OK
+PHASE=cpu_tests
+test_answer_labels_do_not_affect_selection_or_leak (__main__.PlanChecks.test_answer_labels_do_not_affect_selection_or_leak) ... ok
+test_duplicate_identity_and_overlapping_windows_rejected (__main__.PlanChecks.test_duplicate_identity_and_overlapping_windows_rejected) ... ok
+test_end_markers_exclude_later_boundaries (__main__.PlanChecks.test_end_markers_exclude_later_boundaries) ... ok
+test_first_boundary_is_inclusive_and_exact (__main__.PlanChecks.test_first_boundary_is_inclusive_and_exact) ... ok
+test_insufficient_cohort_does_not_silently_shrink (__main__.PlanChecks.test_insufficient_cohort_does_not_silently_shrink) ... ok
+test_intersection_and_sorted_limit_use_same_questions (__main__.PlanChecks.test_intersection_and_sorted_limit_use_same_questions) ... ok
+test_token_hash_and_target_parsing (__main__.PlanChecks.test_token_hash_and_target_parsing) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
+test_confidence_gate_checks_ids_status_and_probabilities_even_with_null_C (__main__.CollectorTests.test_confidence_gate_checks_ids_status_and_probabilities_even_with_null_C) ... ok
+test_deltas_chronological_not_canary_order_and_normalization (__main__.CollectorTests.test_deltas_chronological_not_canary_order_and_normalization) ... ok
+test_dual_window_chunked_matches_full_tiny_Qwen2 (__main__.CollectorTests.test_dual_window_chunked_matches_full_tiny_Qwen2) ... ok
+test_fp32_configuration_disables_tf32 (__main__.CollectorTests.test_fp32_configuration_disables_tf32) ... ok
+test_literal_probe_open_close_probability_and_content_scope (__main__.CollectorTests.test_literal_probe_open_close_probability_and_content_scope) ... ok
+test_logit_shift_diagnostic_does_not_loosen_original_gate (__main__.CollectorTests.test_logit_shift_diagnostic_does_not_loosen_original_gate) ... ok
+test_long_uneven_fp32_cache_and_actual_probe_paths (__main__.CollectorTests.test_long_uneven_fp32_cache_and_actual_probe_paths) ... ok
+test_mixed_delimiter_token_excluded_and_uncertain_spans_rejected (__main__.CollectorTests.test_mixed_delimiter_token_excluded_and_uncertain_spans_rejected) ... ok
+test_nested_box_and_non_box_handling (__main__.CollectorTests.test_nested_box_and_non_box_handling) ... ok
+test_plan_hash_identity_and_exact_pairing_rejections (__main__.CollectorTests.test_plan_hash_identity_and_exact_pairing_rejections) ... ok
+test_truncated_and_empty_probes_have_null_C (__main__.CollectorTests.test_truncated_and_empty_probes_have_null_C) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 5.243s
+
+OK
+PHASE=prepare_frozen_plan
+{"plan": "/workspace/infty-dev/phase2_fix_20261024/runner_real_failure_fixture/infty_signal_phase2fix_ht8TI9Tu/plan.json", "cohort_cases": [1, 6, 8], "common_eligible_cases": [1, 6, 8, 10, 11, 12, 15, 19], "positions": [[1, 1024, 1041], [1, 2048, 2104], [1, 4096, 4103], [6, 1024, 1055], [6, 2048, 2092], [6, 4096, 4203], [8, 1024, 1084], [8, 2048, 2055], [8, 4096, 4173]]}
+PHASE=float32_canary_then_nine_positions
+Traceback (most recent call last):
+  File "/workspace/infty-dev/phase2_fix_20261024/autodl_signal_v2_1/collect_phase2.py", line 506, in <module>
+    main()
+  File "/workspace/infty-dev/phase2_fix_20261024/autodl_signal_v2_1/collect_phase2.py", line 356, in main
+    raise ValueError("CUDA is required for this GPU run; use --device cpu only for explicit synthetic checks")
+ValueError: CUDA is required for this GPU run; use --device cpu only for explicit synthetic checks
+RETURN_ZIP=/workspace/infty-dev/phase2_fix_20261024/runner_real_failure_fixture/infty_signal_phase2fix_ht8TI9Tu_return.zip
+EXPERIMENT_EXIT_STATUS=1

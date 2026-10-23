@@ -1,0 +1,27 @@
+test_answer_labels_do_not_affect_selection_or_leak (test_prepare_plan.PlanChecks.test_answer_labels_do_not_affect_selection_or_leak) ... ok
+test_duplicate_identity_and_overlapping_windows_rejected (test_prepare_plan.PlanChecks.test_duplicate_identity_and_overlapping_windows_rejected) ... ok
+test_end_markers_exclude_later_boundaries (test_prepare_plan.PlanChecks.test_end_markers_exclude_later_boundaries) ... ok
+test_first_boundary_is_inclusive_and_exact (test_prepare_plan.PlanChecks.test_first_boundary_is_inclusive_and_exact) ... ok
+test_insufficient_cohort_does_not_silently_shrink (test_prepare_plan.PlanChecks.test_insufficient_cohort_does_not_silently_shrink) ... ok
+test_intersection_and_sorted_limit_use_same_questions (test_prepare_plan.PlanChecks.test_intersection_and_sorted_limit_use_same_questions) ... ok
+test_token_hash_and_target_parsing (test_prepare_plan.PlanChecks.test_token_hash_and_target_parsing) ... ok
+test_confidence_gate_checks_ids_status_and_probabilities_even_with_null_C (test_collect_phase2.CollectorTests.test_confidence_gate_checks_ids_status_and_probabilities_even_with_null_C) ... ok
+test_deltas_chronological_not_canary_order_and_normalization (test_collect_phase2.CollectorTests.test_deltas_chronological_not_canary_order_and_normalization) ... ok
+test_dual_window_chunked_matches_full_tiny_Qwen2 (test_collect_phase2.CollectorTests.test_dual_window_chunked_matches_full_tiny_Qwen2) ... ok
+test_fp32_configuration_disables_tf32 (test_collect_phase2.CollectorTests.test_fp32_configuration_disables_tf32) ... ok
+test_literal_probe_open_close_probability_and_content_scope (test_collect_phase2.CollectorTests.test_literal_probe_open_close_probability_and_content_scope) ... ok
+test_logit_shift_diagnostic_does_not_loosen_original_gate (test_collect_phase2.CollectorTests.test_logit_shift_diagnostic_does_not_loosen_original_gate) ... ok
+test_long_uneven_fp32_cache_and_actual_probe_paths (test_collect_phase2.CollectorTests.test_long_uneven_fp32_cache_and_actual_probe_paths) ... ok
+test_mixed_delimiter_token_excluded_and_uncertain_spans_rejected (test_collect_phase2.CollectorTests.test_mixed_delimiter_token_excluded_and_uncertain_spans_rejected) ... ok
+test_nested_box_and_non_box_handling (test_collect_phase2.CollectorTests.test_nested_box_and_non_box_handling) ... ok
+test_plan_hash_identity_and_exact_pairing_rejections (test_collect_phase2.CollectorTests.test_plan_hash_identity_and_exact_pairing_rejections) ... ok
+test_truncated_and_empty_probes_have_null_C (test_collect_phase2.CollectorTests.test_truncated_and_empty_probes_have_null_C) ... ok
+test_detached_launcher_returns_then_finishes (test_runner.RunnerTests.test_detached_launcher_returns_then_finishes) ... ok
+test_repack_never_overwrites_and_manual_recovery (test_runner.RunnerTests.test_repack_never_overwrites_and_manual_recovery) ... ok
+test_reuse_refused_and_sourcing_does_not_exit_parent (test_runner.RunnerTests.test_reuse_refused_and_sourcing_does_not_exit_parent) ... ok
+test_success_and_failure_preserve_exit_and_archive (test_runner.RunnerTests.test_success_and_failure_preserve_exit_and_archive) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 7.775s
+
+OK

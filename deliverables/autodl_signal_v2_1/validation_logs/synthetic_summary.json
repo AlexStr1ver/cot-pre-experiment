@@ -1,0 +1,18 @@
+{
+  "synthetic_fixture_only": true,
+  "not_actual_checkpoint": true,
+  "summary": {
+    "completed": true,
+    "planned_positions": 9,
+    "executed_positions": 9,
+    "canary_passed": true,
+    "actual_gpu_validation_done_by_this_run": false,
+    "stage": "completed",
+    "model_load_seconds": 0.9505559069948504,
+    "current_case": 8,
+    "current_cut": 4173,
+    "measurement_seconds_sum_excluding_canary_audit": 7.683081386960112,
+    "canary_audit_seconds_sum": 2.008766971004661,
+    "closed_nonempty_probes": 0
+  }
+}

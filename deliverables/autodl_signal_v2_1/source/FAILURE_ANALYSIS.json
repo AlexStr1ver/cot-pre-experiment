@@ -1,0 +1,61 @@
+{
+  "result_zip_sha256": "486cf2f5b482c9b0971c659635e14a66a52674bb21cd96120730be4512f29802",
+  "archive_crc_passed": true,
+  "exit_status": 1,
+  "complete_positions": 0,
+  "planned_positions": 9,
+  "C_probe_executed": false,
+  "direct_error": "Long-prefix chunk consistency gate failed",
+  "canary": {
+    "passed": false,
+    "signals": {
+      "raw_tail32": {
+        "H_primary": 939.6429408703598,
+        "H_alternative": 942.1747223149493,
+        "H_relative_difference": 0.002694407986766191,
+        "logit_max_absolute_difference": 0.875,
+        "logit_mean_absolute_difference": 0.11998101323843002,
+        "greedy_next_token_agrees": true,
+        "gate_passed": false
+      },
+      "asag_style_probe_window": {
+        "H_primary": 329.22497789222246,
+        "H_alternative": 331.0985455061526,
+        "H_relative_difference": 0.005690842857444153,
+        "logit_max_absolute_difference": 0.34375,
+        "logit_mean_absolute_difference": 0.03002241626381874,
+        "greedy_next_token_agrees": true,
+        "gate_passed": true
+      }
+    },
+    "engineering_gate": {
+      "max_relative_H_difference": 0.01,
+      "max_mean_absolute_logit_difference": 0.05
+    },
+    "interpretation": "Numerical sanity comparison of two bounded chunk sizes. These are engineering tolerances, not entropy/confidence policy thresholds and not a full long-sequence attention reference."
+  },
+  "hardware": {
+    "torch": "2.6.0+cu124",
+    "cuda_build": "12.4",
+    "device": "cuda",
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "capability": [
+      8,
+      9
+    ],
+    "total_bytes": 25250627584,
+    "bf16_supported_including_emulation": true,
+    "bf16_native_supported": true,
+    "note": "Native BF16 support is recorded separately; an emulated but operational BF16 path is not rejected. Do not compare wall-clock costs with historical GPUs without hardware matching."
+  },
+  "returned_code_matches_v2": {
+    "test_prepare_plan.py": true,
+    "collect_phase2.py": true,
+    "test_collect_phase2.py": true,
+    "v1_core.py": true,
+    "prepare_plan.py": true,
+    "run_phase2.sh": true
+  },
+  "numerical_cause": "BF16 chunk-shape sensitivity is plausible, not established; FP32 rerun pending",
+  "no_evidence_of_OOM_in_returned_logs": true
+}

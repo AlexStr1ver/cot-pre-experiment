@@ -1,0 +1,46 @@
+{
+  "date_beijing": "2026-10-24",
+  "unit_tests": {
+    "passed": 22,
+    "failed": 0,
+    "planner": 7,
+    "collector": 11,
+    "runner": 4,
+    "seconds": 7.775
+  },
+  "bash_syntax": "passed for both scripts",
+  "long_sequence_cpu_test": {
+    "input_tokens": 4158,
+    "asag_input_tokens": 4164,
+    "queries": 12,
+    "chunks": [
+      128,
+      64
+    ],
+    "model": "random tiny Qwen2 FP32 CPU; NOT real checkpoint",
+    "result": "passed"
+  },
+  "synthetic_CLI_integration": {
+    "identical_nine_selected_prefixes_to_uploaded_plan": true,
+    "completed": true,
+    "executed_positions": 9,
+    "canary_passed": true,
+    "closed_nonempty_probes": 0,
+    "model": "random four-layer 32-hidden Qwen2, actual tokenizer and prefix IDs, probe budget4 for fixture",
+    "actual_GPU_validation": false
+  },
+  "real_runner_failure_path": {
+    "expected_exit_status": 1,
+    "actual_exit_status": 1,
+    "reason": "CPU-only cloud deliberately cannot satisfy CUDA requirement",
+    "archive_CRC_valid": true,
+    "summary_error_and_logs_preserved": true
+  },
+  "runner_fixture_tests": "success/failure exit propagation, detached launch, no-overwrite repack, no directory reuse/source guard",
+  "unchanged_v1_core": true,
+  "unchanged_plan_preparer": true,
+  "cloud_torch": "2.6.0+cpu",
+  "cloud_transformers": "4.51.3",
+  "GPU_checkpoint_rerun": "NOT EXECUTED HERE: AutoDL command required; real weights and CUDA unavailable in cloud",
+  "no_claim_of_FP32_GPU_pass": true
+}
