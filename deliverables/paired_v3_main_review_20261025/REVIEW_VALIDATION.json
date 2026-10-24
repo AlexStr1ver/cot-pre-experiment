@@ -1,0 +1,14 @@
+{
+  "date_beijing": "2026-10-25",
+  "source_zip_sha256": "8c44cd6211124505142da689c80099b2c8ef410272b761f8673dfc0cf7cf2e16",
+  "source_zip_crc_passed": true,
+  "raw_results_unchanged": true,
+  "original_experiment_code_unchanged": true,
+  "main18_accounting_and_manual_join": "analyze_main.py passed; independent rerun byte-identical derived JSON and CSV",
+  "independent_actual_tokenizer_audit": "all18 initial prefixes,36 event texts and17 resets verified",
+  "manual_grading": "18 final answers reviewed; 28^\\circ equivalent to28 only in the angle question; one null auto grade resolved in separate annotation",
+  "replicate_preflight": "real local tokenizer/original data verified; original validate_prior accepts18; exact schedule36 jobs seeds2027/2028 and9prefixes; no2026rerun",
+  "runtime_CPU_tests_in_uploaded_main": 24,
+  "new_GPU_inference_performed_for_review": false,
+  "no_new_statistical_test_or_threshold_fit": true
+}

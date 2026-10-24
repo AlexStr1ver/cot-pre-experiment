@@ -1,0 +1,54 @@
+{
+  "date_beijing": "2026-10-25",
+  "audit_passed": true,
+  "mode": "main",
+  "branches": 18,
+  "new_branches": 16,
+  "reused_branches": 2,
+  "package_files_verified": 29,
+  "events": 36,
+  "executed_resets": 17,
+  "manual_unit_equivalence_count": 1,
+  "pair_counts": {
+    "both_wrong": 4,
+    "both_correct": 3,
+    "B_only_correct": 1,
+    "A_only_correct": 1
+  },
+  "totals": {
+    "A": {
+      "correct": 4,
+      "n_prefixes": 9,
+      "tokens": 48743,
+      "branch_wall_seconds": 1148.8586683040485
+    },
+    "B": {
+      "correct": 4,
+      "n_prefixes": 9,
+      "tokens": 41008,
+      "branch_wall_seconds": 967.4588004611433
+    }
+  },
+  "relative_token_reduction_descriptive": 0.15868945284451097,
+  "relative_wall_reduction_descriptive": 0.1578957210730617,
+  "both_correct_totals": {
+    "A": {
+      "tokens": 14721,
+      "branch_wall_seconds": 347.5408594571054
+    },
+    "B": {
+      "tokens": 12816,
+      "branch_wall_seconds": 300.3842197544873
+    }
+  },
+  "forced_summary_successes": 8,
+  "fallbacks": 1,
+  "max_peak_allocated_gib": 7.090775489807129,
+  "max_chunk_H_relative_difference": 7.196447927944875e-08,
+  "new16_minutes": 32.6295381532982,
+  "all18_branch_minutes": 35.27195781275319,
+  "next_replicate_new_branches": 36,
+  "next_replicate_max_tokens": 502184,
+  "next_similar_lengths_minutes_estimate": 70.54391562550639,
+  "warning": "Descriptive 9 correlated development prefixes from3 questions/1seed; no trained or online H+C policy, no statistical significance or noninferiority claim. Timings exclude original prefix generation and online monitoring. Seeds add stochastic replicates, not independent questions."
+}

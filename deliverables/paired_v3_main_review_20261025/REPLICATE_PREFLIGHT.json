@@ -1,0 +1,13 @@
+{
+  "date_beijing": "2026-10-25",
+  "main_compatible_with_replicate": true,
+  "validated_main_records": 18,
+  "replicate_jobs": 36,
+  "replicate_seeds": [
+    2027,
+    2028
+  ],
+  "replicate_unique_prefixes": 9,
+  "main_seed2026_rerun": false,
+  "actual_new_inference": false
+}
