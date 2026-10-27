@@ -1,0 +1,292 @@
+{
+  "protocol": "shared_cohort_paragraph_signal_plan_v2",
+  "model_revision": "2ffdd84494667fbba35525550f9396492b264e23",
+  "dataset_revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+  "baseline_run_config_sha256": "b3c9f763e42e89ebae064066fc0c5ba06edce1213ecfd741789447ecb3dded35",
+  "baseline_source_sha256": {
+    "native_batch_check.py": "d0ad25b1029207444748d80956acf85080934dd489a9ecbee58d8051c2c177a6",
+    "reference_runner.py": "21ee2ffe505d2316db7aab946d7209af663277cb3a66dfbfac908e2feb19ee32"
+  },
+  "baseline_case_collection_sha256": "a4374874c2c071e003bea1d784097fbec220989eb0e34d7d168d6a47ce29a969",
+  "planner_sha256": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478",
+  "model_and_tokenizer_file_sha256": {
+    "config.json": "87ba0da62bf09bf44fb3e5d2819c7c13d9a4ef4e2dc6518dc2c97b390e9550af",
+    "tokenizer.json": "cd74964c346465e86c38389a6bf341430decb2861be32d4d2f36c1aa4fb4c516",
+    "tokenizer_config.json": "5b15590bba46256173120a0e042ae1450dbf94160e62ec25709430e18cdcbde9",
+    "special_tokens_map.json": "59cda48bbe8bab9d61ffb410e6e3c07b6d98bff73cee7c88ff8b51f95f21ab1c",
+    "chat_template.jinja": "b6835114b7303ddd78919a82e4d9f7d8c26ed0d7dfc36beeb12d524f6144eab1"
+  },
+  "tokenizer_ids": {
+    "bos": 151646,
+    "eos": 151643,
+    "markers": {
+      "<think>": 151648,
+      "</think>": 151649,
+      "<summary>": 151650,
+      "</summary>": 151651,
+      "<history>": 151652,
+      "</history>": 151653
+    }
+  },
+  "targets": [
+    1024,
+    2048,
+    4096
+  ],
+  "boundary_window": 128,
+  "limit": 3,
+  "source_case_count": 20,
+  "selection_rule": "For every target, first paragraph boundary in [target,target+window] before the first thinking end marker. Intersect eligible cases across all targets, sort case IDs, take first limit. No answer labels used.",
+  "population_scope": "Previously explored native20 development trajectories that survive to all requested lengths. Long-reasoning-selected cohort, not an unbiased benchmark or held-out test.",
+  "delta_reference_rule": "Earliest selected chronological cut per case, computed after all measurements; not process execution order and not ASAG first ATP.",
+  "candidate_semantics": "cut counts saved generated tokens; input_tokens also includes original question/chat prompt. Original IDs are hashed without decode/reencode substitution.",
+  "cohort_cases": [
+    1,
+    6,
+    8
+  ],
+  "common_eligible_cases": [
+    1,
+    6,
+    8,
+    10,
+    11,
+    12,
+    15,
+    19
+  ],
+  "eligible_by_target": {
+    "1024": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      20
+    ],
+    "2048": [
+      1,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      15,
+      18,
+      19,
+      20
+    ],
+    "4096": [
+      1,
+      6,
+      8,
+      10,
+      11,
+      12,
+      15,
+      19
+    ]
+  },
+  "skipped_by_target": {
+    "1024": [
+      {
+        "case": 3,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 7,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 9,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 14,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 18,
+        "reason": "no_paragraph_boundary_in_window"
+      }
+    ],
+    "2048": [
+      {
+        "case": 2,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 3,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 7,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 9,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 13,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 14,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 16,
+        "reason": "no_paragraph_boundary_in_window"
+      },
+      {
+        "case": 17,
+        "reason": "thinking_ended_before_target"
+      }
+    ],
+    "4096": [
+      {
+        "case": 2,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 3,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 4,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 5,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 7,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 9,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 13,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 14,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 16,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 17,
+        "reason": "thinking_ended_before_target"
+      },
+      {
+        "case": 18,
+        "reason": "no_paragraph_boundary_in_window"
+      },
+      {
+        "case": 20,
+        "reason": "thinking_ended_before_target"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "case": 1,
+      "unique_id": "test/intermediate_algebra/1544.json",
+      "target": 1024,
+      "cut": 1041,
+      "input_tokens": 1096,
+      "prefix_token_ids_sha256": "ff04888b8b4d0045eb6a1f1341e25289b441783cf4f2767f399192413d9256fd",
+      "case_sha256": "44e9c26375d39e9471cdb9f1f3ace8aa28aea1f62035fb1aca85ccdd560eef3c"
+    },
+    {
+      "case": 1,
+      "unique_id": "test/intermediate_algebra/1544.json",
+      "target": 2048,
+      "cut": 2104,
+      "input_tokens": 2159,
+      "prefix_token_ids_sha256": "f9f7d606839e758e13b97a5aeb5782a3b6456ba51537f91d0bff05e8f65c5cc7",
+      "case_sha256": "44e9c26375d39e9471cdb9f1f3ace8aa28aea1f62035fb1aca85ccdd560eef3c"
+    },
+    {
+      "case": 1,
+      "unique_id": "test/intermediate_algebra/1544.json",
+      "target": 4096,
+      "cut": 4103,
+      "input_tokens": 4158,
+      "prefix_token_ids_sha256": "921055c8ec60f234059688798a23015638b956bfee0c849276e3184b9215a8b5",
+      "case_sha256": "44e9c26375d39e9471cdb9f1f3ace8aa28aea1f62035fb1aca85ccdd560eef3c"
+    },
+    {
+      "case": 6,
+      "unique_id": "test/geometry/434.json",
+      "target": 1024,
+      "cut": 1055,
+      "input_tokens": 1210,
+      "prefix_token_ids_sha256": "ea8683502f22ebd1f3725d4d0b77be3c3d155d040a255750f19ac144b3e6994d",
+      "case_sha256": "ae780cac4a0740c08e3f1a304d3aa13b63c7e1ad24ad4ecd14beb1bb1a70de64"
+    },
+    {
+      "case": 6,
+      "unique_id": "test/geometry/434.json",
+      "target": 2048,
+      "cut": 2092,
+      "input_tokens": 2247,
+      "prefix_token_ids_sha256": "2224eb03b489784996500dea26889ab23f3a4c42a2fd78af3dfa9630de4b5eab",
+      "case_sha256": "ae780cac4a0740c08e3f1a304d3aa13b63c7e1ad24ad4ecd14beb1bb1a70de64"
+    },
+    {
+      "case": 6,
+      "unique_id": "test/geometry/434.json",
+      "target": 4096,
+      "cut": 4203,
+      "input_tokens": 4358,
+      "prefix_token_ids_sha256": "1c36b2de5ec9b46bab2f5dcf6840caad9bbf269e5eb416e31782d6feb0de7fc1",
+      "case_sha256": "ae780cac4a0740c08e3f1a304d3aa13b63c7e1ad24ad4ecd14beb1bb1a70de64"
+    },
+    {
+      "case": 8,
+      "unique_id": "test/intermediate_algebra/1508.json",
+      "target": 1024,
+      "cut": 1084,
+      "input_tokens": 1147,
+      "prefix_token_ids_sha256": "1b39e60bf5d9a02e206b9363bae56e0fc06494c5dbed62c9053996da5ca1a0b0",
+      "case_sha256": "cb8dd0fe3850a8963bbb12c3437a65cbfa17be01c10ecefffb156f63b3009625"
+    },
+    {
+      "case": 8,
+      "unique_id": "test/intermediate_algebra/1508.json",
+      "target": 2048,
+      "cut": 2055,
+      "input_tokens": 2118,
+      "prefix_token_ids_sha256": "e8d28174f98f3ed4ccbe63853ecb796ece8d3b49783299476aff5b6309311c09",
+      "case_sha256": "cb8dd0fe3850a8963bbb12c3437a65cbfa17be01c10ecefffb156f63b3009625"
+    },
+    {
+      "case": 8,
+      "unique_id": "test/intermediate_algebra/1508.json",
+      "target": 4096,
+      "cut": 4173,
+      "input_tokens": 4236,
+      "prefix_token_ids_sha256": "61e7a6beaf80e373ed6dd686378f08ef34901a0e61fec888793ad3a02ca1968e",
+      "case_sha256": "cb8dd0fe3850a8963bbb12c3437a65cbfa17be01c10ecefffb156f63b3009625"
+    }
+  ]
+}

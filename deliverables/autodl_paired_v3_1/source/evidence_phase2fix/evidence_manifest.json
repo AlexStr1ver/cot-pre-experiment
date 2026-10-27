@@ -1,0 +1,18 @@
+{
+  "source_return_zip_sha256": "5ad597fb28bf8a7ab4b31c5f0ea06794d9d96f558ccf699970bc4e6fb0cf26bb",
+  "files_sha256": {
+    "plan.json": "583b39e0d13d80b1e3ca15ec40d2cdb3fb55f92545dab402bfc855aad9517b9a",
+    "signals/case_001_cut_01041.json": "cba72fc9865fd7b87fba6fae7f81377911b90f77b6844062673271967bfca979",
+    "signals/case_001_cut_02104.json": "d3b85d71db2e839067e683357b69724229d75d9628e864095da3bbc570f7622c",
+    "signals/case_001_cut_04103.json": "41d9087124436884cfed04218988216203848fe033dffd09057683d9271ce362",
+    "signals/case_006_cut_01055.json": "90a41d64caa566435e92cb37a32ea8d414ee837866886bc7bba4d14574e3630e",
+    "signals/case_006_cut_02092.json": "bf47739596e940dc7dacd8bd9bc7f2d9bde2fc975ce8ff3e9e0dadbdfc59019e",
+    "signals/case_006_cut_04203.json": "5c0ba86a30dbc76350508d42a29102a4425609e0b8422d1147f2e886487db628",
+    "signals/case_008_cut_01084.json": "336b1efbd0a65bb7921f9818607508eaf30d9a61457c4aab6053662046ba63e2",
+    "signals/case_008_cut_02055.json": "63daab5d84bc25c3451a698691239be580bdfdf93c78514ead9127d010e8806d",
+    "signals/case_008_cut_04173.json": "ceb76c5ba6f92949589b9c873b01686ecbda507ae14ac5722a5bbfff2150fe83",
+    "signals/run_config.json": "8f1257fe61fd34e30a71ea8d4fafc39e16a782f5c61e465a9138693020f4e003",
+    "signals/summary.json": "97ed04259cdb42cec5075d5b813e10f664ef446c3d01e5eb336ba56b31921e8f"
+  },
+  "note": "Original phase2fix plan and measurements copied verbatim; not newly executed measurements."
+}

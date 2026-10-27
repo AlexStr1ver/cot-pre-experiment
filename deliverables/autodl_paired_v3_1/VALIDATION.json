@@ -1,0 +1,41 @@
+{
+  "date_beijing": "2026-10-28",
+  "package": "autodl_paired_v3_1",
+  "unique_CPU_and_lifecycle_tests_passed": 48,
+  "full_suite_before_final_prepare_robustness_changes": {
+    "passed": 47,
+    "failed": 0,
+    "seconds": 43.006
+  },
+  "final_prepare_environment_suite": {
+    "passed": 9,
+    "failed": 0
+  },
+  "categories": {
+    "original_core": 24,
+    "environment_probe": 5,
+    "environment_routing": 9,
+    "legacy_lifecycle": 5,
+    "recovery_lifecycle": 5
+  },
+  "actual_isolated_core24_test_passed": true,
+  "broken_PYTHONPATH_integration": {
+    "normal_probe_fails": true,
+    "isolated_probe_passes": true,
+    "isolated_tiny_Qwen_CPU_test_passes": true
+  },
+  "shell_syntax": "bash -n passed",
+  "original_six_scientific_files_byte_identical": true,
+  "runtime_AutoDL_CPU_tests": 24,
+  "CUDA_wheel_install_executed_in_cloud": false,
+  "new_real_GPU_inference_executed_in_cloud": false,
+  "limitations": "Cloud has CPU PyTorch only. AutoDL must pass real import/runtime/GPU/numerical audits beforereplicate. Pins are explicit repair configuration, not a claim that every historical transitive dependency isknown.",
+  "actual_wrapper_CPU_environment_rejection": {
+    "expected_exit": 1,
+    "actual_exit": 1,
+    "model_never_started": true,
+    "diagnostic_archive_CRC_passed": true,
+    "failed_stage": "environment_preparation",
+    "no_pip_install_attempted": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "date_beijing": "2026-10-28",
+  "scientific_protocol_unchanged": true,
+  "code_sha256": {
+    "paired_experiment.py": "3cc9f570b8ba8e06c4452134602838f0128a3e9958bbdf27f819997e968aaff1",
+    "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+    "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+    "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+    "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+    "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478"
+  },
+  "all_equal_original_v3": true,
+  "original_main_experiment_fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+  "successful_main_source": "/root/autodl-tmp/infty_paired_v3_kt2eZTc2",
+  "failed_run_not_resume_source": "/root/autodl-tmp/infty_paired_v3_gddcYOhk"
+}

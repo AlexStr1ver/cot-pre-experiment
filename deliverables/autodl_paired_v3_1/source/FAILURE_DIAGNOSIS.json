@@ -1,0 +1,26 @@
+{
+  "date_beijing": "2026-10-28",
+  "uploaded_zip": "infty_paired_v3_gddcYOhk_return.zip",
+  "bytes": 90671,
+  "sha256": "900cabbc628357b1fb2b31883f780061627e92f3ef799bd6077bea1927ac0bb4",
+  "zip_CRC_passed": true,
+  "exit_status": 1,
+  "failed_stage": "CPU test import/API availability before paired_experiment",
+  "test_entries_reported": 20,
+  "test_errors": 6,
+  "new_model_branches": 0,
+  "results_directory_present": false,
+  "experiment_log_present": false,
+  "code_and_evidence_files_compared": 30,
+  "all_returned_code_matches_successful_main": true,
+  "observed_errors": [
+    "transformers lacks Qwen2Config (unknown location)",
+    "torch lacks zeros",
+    "transformers lacks AutoTokenizer"
+  ],
+  "exact_environment_cause": "Not identifiable from old archive; incomplete installation/namespace leftovers/path shadowing/environment changes remain alternatives",
+  "not_proven": "Base miniconda unittest path does not prove wrong interpreter",
+  "next_source": "/root/autodl-tmp/infty_paired_v3_kt2eZTc2",
+  "next_new_branches": 36,
+  "old_18_results_preserved": true
+}

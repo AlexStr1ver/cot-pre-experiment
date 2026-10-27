@@ -1,0 +1,12 @@
+{
+  "date_beijing": "2026-10-28",
+  "scientific_fingerprint_preserved": true,
+  "main_records_validated": 18,
+  "new_schedule_count": 36,
+  "seeds": [
+    2027,
+    2028
+  ],
+  "real_model_inference": false,
+  "actual_local_tokenizer_and_original_prefixes_verified": true
+}

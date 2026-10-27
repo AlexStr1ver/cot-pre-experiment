@@ -1,0 +1,21 @@
+test_broken_packages_build_new_environment_and_record_ready_marker (test_prepare_environment.PreparationTests.test_broken_packages_build_new_environment_and_record_ready_marker) ... SELECTED_PYTHON=/tmp/tmpejtcr_2r/root with spaces/venvs/new repair/bin/python
+ok
+test_existing_repair_marker_reused_instead_of_install (test_prepare_environment.PreparationTests.test_existing_repair_marker_reused_instead_of_install) ... SELECTED_PYTHON=/tmp/tmp0t9dxdab/root with spaces/venvs/infty-paired-v3_1_cached/bin/python
+ok
+test_hardware_or_python_mismatch_blocks_install (test_prepare_environment.PreparationTests.test_hardware_or_python_mismatch_blocks_install) ... ok
+test_healthy_isolated_python_avoids_install_despite_normal_shadowing (test_prepare_environment.PreparationTests.test_healthy_isolated_python_avoids_install_despite_normal_shadowing) ... SELECTED_PYTHON=/tmp/tmpv5nqxpkz/root with spaces/venvs/infty-official/bin/python
+ok
+test_installer_commands_are_pinned_new_venv_outside_archive (test_prepare_environment.PreparationTests.test_installer_commands_are_pinned_new_venv_outside_archive) ... ENVIRONMENT_STAGE=installing_torch
+ENVIRONMENT_STAGE=installing_transformers
+ENVIRONMENT_STAGE=pip_check
+ok
+test_installer_failure_has_no_selected_python_or_ready_marker (test_prepare_environment.PreparationTests.test_installer_failure_has_no_selected_python_or_ready_marker) ... ok
+test_invalid_or_incomplete_source_blocks_any_install (test_prepare_environment.PreparationTests.test_invalid_or_incomplete_source_blocks_any_install) ... ok
+test_optional_inventory_failure_does_not_block_healthy_environment (test_prepare_environment.PreparationTests.test_optional_inventory_failure_does_not_block_healthy_environment) ... SELECTED_PYTHON=/tmp/tmp6842956_/root with spaces/venvs/infty-official/bin/python
+ok
+test_zero_exit_without_passed_json_is_not_a_healthy_probe (test_prepare_environment.PreparationTests.test_zero_exit_without_passed_json_is_not_a_healthy_probe) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.027s
+
+OK

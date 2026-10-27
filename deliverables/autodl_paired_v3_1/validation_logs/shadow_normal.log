@@ -1,0 +1,109 @@
+{
+  "probe_schema": 1,
+  "sys_executable": "/workspace/infty-dev/.venv/bin/python",
+  "sys_prefix": "/workspace/infty-dev/.venv",
+  "sys_base_prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_major_minor": [
+    3,
+    12
+  ],
+  "sys_path": [
+    "/workspace/infty-dev/phase3_recovery_20261027/autodl_paired_v3_1",
+    "/tmp/infty-shadow-fixture-a8as2h5i",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python312.zip",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/lib-dynload",
+    "/workspace/infty-dev/.venv/lib/python3.12/site-packages"
+  ],
+  "cwd": "/tmp/infty-shadow-fixture-a8as2h5i",
+  "isolated_mode": false,
+  "no_user_site": false,
+  "selected_environment": {
+    "PYTHONPATH": "/tmp/infty-shadow-fixture-a8as2h5i",
+    "PYTHONHOME": null
+  },
+  "modules": {
+    "torch": {
+      "file": "/tmp/infty-shadow-fixture-a8as2h5i/torch/__init__.py",
+      "origin": "/tmp/infty-shadow-fixture-a8as2h5i/torch/__init__.py",
+      "path": [
+        "/tmp/infty-shadow-fixture-a8as2h5i/torch"
+      ],
+      "loader_type": "SourceFileLoader",
+      "version": null,
+      "is_namespace_package": false
+    },
+    "transformers": {
+      "file": "/tmp/infty-shadow-fixture-a8as2h5i/transformers/__init__.py",
+      "origin": "/tmp/infty-shadow-fixture-a8as2h5i/transformers/__init__.py",
+      "path": [
+        "/tmp/infty-shadow-fixture-a8as2h5i/transformers"
+      ],
+      "loader_type": "SourceFileLoader",
+      "version": null,
+      "is_namespace_package": false
+    }
+  },
+  "distribution_versions": {
+    "torch": "2.6.0+cpu",
+    "transformers": "4.51.3",
+    "tokenizers": "0.21.4",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.5.4"
+  },
+  "module_versions": {
+    "torch": null,
+    "transformers": null,
+    "cuda_build": null
+  },
+  "dependencies_ok": false,
+  "basic_torch_ops_ok": false,
+  "transformers_apis_ok": false,
+  "cuda": {
+    "available": null,
+    "error": "AttributeError(\"module 'torch' has no attribute 'cuda'\")"
+  },
+  "hardware": null,
+  "errors": [
+    {
+      "kind": "dependency_api",
+      "module": "torch",
+      "error": "AttributeError(\"module 'torch' has no attribute 'zeros'\")",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/infty-dev/phase3_recovery_20261027/autodl_paired_v3_1/environment_probe.py\", line 118, in collect_environment\n    z = torch.zeros(2, 2)\n        ^^^^^^^^^^^\nAttributeError: module 'torch' has no attribute 'zeros'\n"
+    },
+    {
+      "kind": "dependency_api",
+      "module": "transformers",
+      "error": "AttributeError(\"module 'transformers' has no attribute 'Qwen2Config'\")",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/infty-dev/phase3_recovery_20261027/autodl_paired_v3_1/environment_probe.py\", line 142, in collect_environment\n    apis = {name: getattr(transformers, name) for name in names}\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'transformers' has no attribute 'Qwen2Config'\n"
+    }
+  ],
+  "new_model_inference": false,
+  "package_versions_match": false,
+  "python_version_compatible": true,
+  "cuda_ok": true,
+  "hardware_compatible": true,
+  "mismatches": [
+    {
+      "kind": "package_version",
+      "name": "transformers",
+      "expected": "4.51.3",
+      "actual": null
+    },
+    {
+      "kind": "package_version",
+      "name": "torch_base",
+      "expected": "2.6.0",
+      "actual": "None"
+    }
+  ],
+  "expected_versions": {
+    "transformers": "4.51.3",
+    "torch_base": "2.6.0"
+  },
+  "passed": false,
+  "classification": "dependency_import_or_api_failure",
+  "expected_main_config": null
+}
