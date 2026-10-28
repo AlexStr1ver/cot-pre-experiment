@@ -1,0 +1,29 @@
+--- v3.1/paired_experiment.py
++++ v3.2/paired_experiment.py
+@@ -19,0 +20,2 @@
++from hardware_compatibility import compare_hardware
++from resume_compatibility import CURRENT_CODE_FILES, fingerprint_bridge
+@@ -36 +38 @@
+-CODE_FILES = ['paired_experiment.py','actions.py','decoder.py','collect_phase2.py','v1_core.py','prepare_plan.py']
++CODE_FILES = list(CURRENT_CODE_FILES)
+@@ -154,5 +155,0 @@
+-def hardware_identity(config):
+-    h = config['hardware']
+-    return {k: h.get(k) for k in ['device','name','capability','total_bytes','torch','cuda_build']}
+-
+-
+@@ -164,4 +161,4 @@
+-    if prior['experiment_fingerprint'] != config['experiment_fingerprint']:
+-        raise ValueError('Prior code/protocol/weights/prefix fingerprint differs; no reuse')
+-    if hardware_identity(prior) != hardware_identity(config):
+-        raise ValueError('Prior GPU/runtime differs; keep timings separate and start a fresh pilot')
++    fingerprint_bridge(prior, config)
++    compatibility = compare_hardware(config['hardware'], prior['hardware'])
++    if compatibility['compatible'] is not True:
++        raise ValueError('Prior GPU/runtime is incompatible: ' + json.dumps(compatibility, sort_keys=True))
+@@ -351 +348,4 @@
+-            reuse_manifest.update(source_run_config_sha256=file_sha(source/'run_config.json'),source_hardware=prior['hardware'],source_mode=prior['mode'])
++            reuse_manifest.update(source_run_config_sha256=file_sha(source/'run_config.json'),
++                source_hardware=prior['hardware'],current_hardware=config['hardware'],source_mode=prior['mode'],
++                fingerprint_compatibility=fingerprint_bridge(prior,config),
++                hardware_compatibility=compare_hardware(config['hardware'],prior['hardware']))

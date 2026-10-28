@@ -1,0 +1,26 @@
+{
+  "date_beijing": "2026-10-28",
+  "source_archive": "infty_paired_v3_FCuKe8gI_return.zip",
+  "source_archive_bytes": 119945,
+  "source_archive_sha256": "ba01d39b956cc22400dfc74cf96384fdc149aa31369a94432d1c6748af1e8c8a",
+  "zip_crc_valid": true,
+  "returned_code_files_identical_to_v3_1": 43,
+  "exit_status": 1,
+  "failed_stage": "environment_preparation",
+  "dependency_and_cuda_checks_passed": true,
+  "sole_observed_mismatch": {
+    "kind": "hardware",
+    "name": "total_bytes",
+    "expected": 25252724736,
+    "actual": 25250627584
+  },
+  "capacity_difference_bytes": -2097152,
+  "capacity_difference_percent": -0.008304656316988731,
+  "root_cause": "Exact total memory byte equality incorrectly blocked otherwise compatible runtime/GPU model metadata",
+  "same_physical_gpu_proven": false,
+  "cause_of_capacity_report_change_known": false,
+  "cpu_tests_started": false,
+  "new_environment_install_attempted": false,
+  "new_model_branches": 0,
+  "old_results_and_failed_evidence_unchanged": true
+}

@@ -1,0 +1,129 @@
+{
+  "source_archive": "infty_paired_v3_FCuKe8gI_return.zip",
+  "source_archive_sha256": "ba01d39b956cc22400dfc74cf96384fdc149aa31369a94432d1c6748af1e8c8a",
+  "report": {
+    "probe_schema": 1,
+    "sys_executable": "/root/autodl-tmp/venvs/infty-official/bin/python",
+    "sys_prefix": "/root/autodl-tmp/venvs/infty-official",
+    "sys_base_prefix": "/root/miniconda3",
+    "python_version": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+    "python_major_minor": [
+      3,
+      10
+    ],
+    "sys_path": [
+      "/root/miniconda3/lib/python310.zip",
+      "/root/miniconda3/lib/python3.10",
+      "/root/miniconda3/lib/python3.10/lib-dynload",
+      "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages"
+    ],
+    "cwd": "/root/autodl-tmp/infty_paired_v3_kt2eZTc2/code",
+    "isolated_mode": true,
+    "no_user_site": true,
+    "selected_environment": {
+      "PYTHONPATH": null,
+      "PYTHONHOME": null
+    },
+    "modules": {
+      "torch": {
+        "file": "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/torch/__init__.py",
+        "origin": "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/torch/__init__.py",
+        "path": [
+          "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/torch"
+        ],
+        "loader_type": "SourceFileLoader",
+        "version": "2.6.0+cu124",
+        "is_namespace_package": false
+      },
+      "transformers": {
+        "file": "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/transformers/__init__.py",
+        "origin": "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/transformers/__init__.py",
+        "path": [
+          "/root/autodl-tmp/venvs/infty-official/lib/python3.10/site-packages/transformers"
+        ],
+        "loader_type": "SourceFileLoader",
+        "version": "4.51.3",
+        "is_namespace_package": false
+      }
+    },
+    "distribution_versions": {
+      "torch": "2.6.0",
+      "transformers": "4.51.3",
+      "tokenizers": "0.21.4",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.1.3"
+    },
+    "module_versions": {
+      "torch": "2.6.0+cu124",
+      "transformers": "4.51.3",
+      "cuda_build": "12.4"
+    },
+    "dependencies_ok": true,
+    "basic_torch_ops_ok": true,
+    "transformers_apis_ok": true,
+    "cuda": {
+      "available": true,
+      "error": null
+    },
+    "hardware": {
+      "torch": "2.6.0+cu124",
+      "cuda_build": "12.4",
+      "device": "cuda",
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "capability": [
+        8,
+        9
+      ],
+      "total_bytes": 25250627584
+    },
+    "errors": [],
+    "new_model_inference": false,
+    "transformers_api_modules": {
+      "Qwen2Config": "transformers.models.qwen2.configuration_qwen2",
+      "Qwen2ForCausalLM": "transformers.models.qwen2.modeling_qwen2",
+      "AutoTokenizer": "transformers.models.auto.tokenization_auto",
+      "AutoModelForCausalLM": "transformers.models.auto.modeling_auto"
+    },
+    "package_versions_match": true,
+    "python_version_compatible": true,
+    "cuda_ok": true,
+    "hardware_compatible": false,
+    "mismatches": [
+      {
+        "kind": "hardware",
+        "name": "total_bytes",
+        "expected": 25252724736,
+        "actual": 25250627584
+      }
+    ],
+    "expected_versions": {
+      "transformers": "4.51.3",
+      "torch": "2.6.0+cu124",
+      "cuda_build": "12.4"
+    },
+    "passed": false,
+    "classification": "hardware_mismatch_or_uninspectable",
+    "expected_main_config": "/root/autodl-tmp/infty_paired_v3_kt2eZTc2/results/run_config.json",
+    "probe_exit_status": 1
+  },
+  "expected": {
+    "hardware": {
+      "torch": "2.6.0+cu124",
+      "cuda_build": "12.4",
+      "device": "cuda",
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "capability": [
+        8,
+        9
+      ],
+      "total_bytes": 25252724736,
+      "bf16_supported_including_emulation": true,
+      "bf16_native_supported": true,
+      "note": "Native BF16 support is diagnostic metadata; FP32 mode does not require BF16. Do not compare wall-clock costs across GPU/dtype changes."
+    },
+    "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+    "transformers": "4.51.3"
+  },
+  "note": "Exact failed probe and successful main metadata. Offline replay does not run CUDA or prove physical GPU identity."
+}

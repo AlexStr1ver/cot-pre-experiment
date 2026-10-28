@@ -1,0 +1,104 @@
+{
+  "date_beijing": "2026-10-28",
+  "actual_local_tokenizer_and_original_prefixes_verified": true,
+  "main_records_validated": 18,
+  "new_schedule_count": 36,
+  "seeds": [
+    2027,
+    2028
+  ],
+  "new_schedule_overlaps_main": false,
+  "max_additional_generated_tokens": 502184,
+  "experiment_fingerprint_changed_honestly": true,
+  "fingerprint_compatibility": {
+    "policy": "known_v3_identity_to_v3_2_capacity_compatibility_v1",
+    "prior_experiment_fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+    "current_experiment_fingerprint": "a0220d2a407d82f4158b695dd4cc4662c0ec10226aeb8a79bb747f88cccdc57d",
+    "current_code_sha256": {
+      "paired_experiment.py": "64fd3fd448b5a76c87e06429a6ce934e39b3ba3c400da5708e16c4b55c80cced",
+      "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+      "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+      "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+      "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+      "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478",
+      "hardware_compatibility.py": "d7804135a6d2fc28b36feb60af2dd435d649161d0f85aef3f828caa325f84245",
+      "resume_compatibility.py": "648c3279ab10d4e1963f4decd5d81ef221a80dc4b411c7dd948b25b507ce6e2a"
+    },
+    "prior_metadata_modified": false,
+    "mode": "known_legacy_v3_to_v3_2",
+    "changed_code_files": [
+      "paired_experiment.py"
+    ],
+    "added_code_files": [
+      "hardware_compatibility.py",
+      "resume_compatibility.py"
+    ],
+    "unchanged_scientific_code_files": [
+      "actions.py",
+      "decoder.py",
+      "collect_phase2.py",
+      "v1_core.py",
+      "prepare_plan.py"
+    ],
+    "prior_coordinator_sha256": "3cc9f570b8ba8e06c4452134602838f0128a3e9958bbdf27f819997e968aaff1",
+    "current_coordinator_sha256": "64fd3fd448b5a76c87e06429a6ce934e39b3ba3c400da5708e16c4b55c80cced",
+    "unchanged_identity_fields": [
+      "model_tokenizer_metadata_sha256",
+      "phase2_manifest_sha256",
+      "plan_sha256",
+      "protocol",
+      "weights"
+    ]
+  },
+  "hardware_compatibility": {
+    "policy": "same_runtime_and_gpu_model_capacity_16MiB_and_0.1percent_v1",
+    "compatible": true,
+    "mismatches": [],
+    "memory_capacity_check": {
+      "enabled": true,
+      "expected": 25252724736,
+      "actual": 25250627584,
+      "signed_delta_bytes": -2097152,
+      "absolute_delta_bytes": 2097152,
+      "max_allowed_delta_bytes": 16777216,
+      "absolute_limit_bytes": 16777216,
+      "relative_limit_denominator": 1000,
+      "passed": true,
+      "basis": "driver_reported_total_memory_not_free_memory",
+      "reason": "within_bounded_tolerance"
+    }
+  },
+  "failed_probe_replay": {
+    "package_versions_match": true,
+    "python_version_compatible": true,
+    "cuda_ok": true,
+    "hardware_compatible": true,
+    "mismatches": [],
+    "hardware_compatibility": {
+      "policy": "same_runtime_and_gpu_model_capacity_16MiB_and_0.1percent_v1",
+      "compatible": true,
+      "mismatches": [],
+      "memory_capacity_check": {
+        "enabled": true,
+        "expected": 25252724736,
+        "actual": 25250627584,
+        "signed_delta_bytes": -2097152,
+        "absolute_delta_bytes": 2097152,
+        "max_allowed_delta_bytes": 16777216,
+        "absolute_limit_bytes": 16777216,
+        "relative_limit_denominator": 1000,
+        "passed": true,
+        "basis": "driver_reported_total_memory_not_free_memory",
+        "reason": "within_bounded_tolerance"
+      }
+    },
+    "expected_versions": {
+      "transformers": "4.51.3",
+      "torch": "2.6.0+cu124",
+      "cuda_build": "12.4"
+    }
+  },
+  "real_model_inference": false,
+  "actual_GPU_execution": false,
+  "note": "Read-only replay uses uploaded GPU metadata; actual AutoDL runtime and numerical audits still required."
+}

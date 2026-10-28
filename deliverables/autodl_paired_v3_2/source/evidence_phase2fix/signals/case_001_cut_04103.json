@@ -1,0 +1,315 @@
+{
+  "case": 1,
+  "unique_id": "test/intermediate_algebra/1544.json",
+  "target": 4096,
+  "cut": 4103,
+  "input_tokens": 4158,
+  "prefix_token_ids_sha256": "921055c8ec60f234059688798a23015638b956bfee0c849276e3184b9215a8b5",
+  "case_sha256": "44e9c26375d39e9471cdb9f1f3ace8aa28aea1f62035fb1aca85ccdd560eef3c",
+  "status": "measured_review_required",
+  "is_canary": true,
+  "stage": "point_completed",
+  "signals": {
+    "raw_tail32": {
+      "entropy_sum_nats": 7692.3330078125,
+      "H_sum_over_layers_heads_queries_div_log_keys": 923.1402085660693,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 28.848131517689666,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.601002739951868,
+      "raw_entropy_sum_by_layer_nats": [
+        1540.0772705078125,
+        1939.6212158203125,
+        2143.206298828125,
+        2069.42822265625
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 32,
+      "keys": 4158,
+      "max_attention_row_mass_error": 2.384185791015625e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 1.0884418804198503
+    },
+    "asag_style_probe_window": {
+      "entropy_sum_nats": 2689.790771484375,
+      "H_sum_over_layers_heads_queries_div_log_keys": 322.74011037031477,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 26.89500919752623,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.5603126916151298,
+      "raw_entropy_sum_by_layer_nats": [
+        551.199951171875,
+        622.35791015625,
+        770.826171875,
+        745.40673828125
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 12,
+      "keys": 4164,
+      "max_attention_row_mass_error": 3.5762786865234375e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 0.804162684828043
+    }
+  },
+  "canary_chunk_comparison": {
+    "passed": true,
+    "signals": {
+      "raw_tail32": {
+        "H_primary": 923.1402085660693,
+        "H_alternative": 923.1402232154628,
+        "H_relative_difference": 1.5869088325180845e-08,
+        "logit_max_absolute_difference": 1.52587890625e-05,
+        "logit_mean_absolute_difference": 2.524956471461337e-06,
+        "logit_mean_signed_difference": -1.6402934761572396e-06,
+        "logit_centered_mean_absolute_difference": 2.163784756703535e-06,
+        "probability_total_variation": 1.1597034443866505e-10,
+        "primary_greedy_token_id": 17,
+        "alternative_greedy_token_id": 17,
+        "greedy_next_token_agrees": true,
+        "primary_greedy_token_probability_difference": 0.0,
+        "gate_passed": true
+      },
+      "asag_style_probe_window": {
+        "H_primary": 322.74011037031477,
+        "H_alternative": 322.7400957234558,
+        "H_relative_difference": 4.538282816813418e-08,
+        "logit_max_absolute_difference": 7.152557373046875e-06,
+        "logit_mean_absolute_difference": 1.3289826483742218e-06,
+        "logit_mean_signed_difference": 8.872889338817913e-07,
+        "logit_centered_mean_absolute_difference": 1.0825998515429092e-06,
+        "probability_total_variation": 3.890582578325308e-10,
+        "primary_greedy_token_id": 90,
+        "alternative_greedy_token_id": 90,
+        "greedy_next_token_agrees": true,
+        "primary_greedy_token_probability_difference": 0.0,
+        "gate_passed": true
+      }
+    },
+    "engineering_gate": {
+      "max_relative_H_difference": 0.01,
+      "max_mean_absolute_logit_difference": 0.05
+    },
+    "interpretation": "Numerical sanity comparison of two bounded chunk sizes. These are engineering tolerances, not entropy/confidence policy thresholds and not a full long-sequence attention reference."
+  },
+  "canary_audit_seconds": 4.197101403027773,
+  "canary_alternative_signals": {
+    "raw_tail32": {
+      "entropy_sum_nats": 7692.3331298828125,
+      "H_sum_over_layers_heads_queries_div_log_keys": 923.1402232154628,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 28.848131975483213,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.6010027494892336,
+      "raw_entropy_sum_by_layer_nats": [
+        1540.0772705078125,
+        1939.621337890625,
+        2143.206298828125,
+        2069.42822265625
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 32,
+      "keys": 4158,
+      "max_attention_row_mass_error": 3.5762786865234375e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 1.400132279843092
+    },
+    "asag_style_probe_window": {
+      "entropy_sum_nats": 2689.7906494140625,
+      "H_sum_over_layers_heads_queries_div_log_keys": 322.7400957234558,
+      "H_query_mean_sum_over_layers_heads_div_log_keys": 26.89500797695465,
+      "H_mean_over_layers_heads_queries_div_log_keys": 0.5603126661865552,
+      "raw_entropy_sum_by_layer_nats": [
+        551.1998291015625,
+        622.35791015625,
+        770.826171875,
+        745.40673828125
+      ],
+      "layer_indices_zero_based": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "heads_per_layer": 12,
+      "queries": 12,
+      "keys": 4164,
+      "max_attention_row_mass_error": 2.384185791015625e-07,
+      "replay_seconds_including_prefill_and_entropy_reduction": 1.3951437193900347
+    }
+  },
+  "probe": {
+    "status": "closed_box_review_required",
+    "answer": "3",
+    "C_mean_selected_token_probability": 0.8242497046788534,
+    "partial_token_probability_mean_diagnostic": 0.8242497046788534,
+    "generated_token_ids": [
+      90,
+      18,
+      630
+    ],
+    "selected_token_probabilities": [
+      0.9997856020927429,
+      0.5092289447784424,
+      0.9637345671653748
+    ],
+    "generated_text": "{3}\n\n",
+    "generated_tokens": 3,
+    "inserted_suffix": "\n\n Final Answer\n\n \\boxed",
+    "inserted_suffix_token_ids": [
+      271,
+      13023,
+      21806,
+      271,
+      1124,
+      79075
+    ],
+    "prefill_input_tokens": 4164,
+    "seconds_including_independent_prefill": 0.8139872699975967,
+    "confidence_scope": "All generated tokens up to and including first balanced box closure, including generated opening/closing format and any characters in the closure token. Empty/truncated boxes have C=null. Not semantic correctness probability.",
+    "format_diagnostic": {
+      "token_text_pieces": [
+        "{",
+        "3",
+        "}\n\n"
+      ],
+      "strict_content_C": 0.5092289447784424,
+      "strict_content_definition": "Arithmetic mean only over generated token spans fully inside the first outer boxed answer; opening/closing or mixed delimiter/content tokens excluded. Secondary diagnostic, not official ASAG confidence.",
+      "strict_content_token_indices": [
+        1
+      ],
+      "excluded_mixed_token_indices": [],
+      "generated_token_character_spans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "answer_content_generated_character_span": [
+        1,
+        2
+      ],
+      "strict_content_character_coverage": 1.0,
+      "strict_content_token_count": 1,
+      "generated_token_count": 3
+    },
+    "closure_token_probability": 0.9637345671653748
+  },
+  "canary_alternative_probe": {
+    "status": "closed_box_review_required",
+    "answer": "3",
+    "C_mean_selected_token_probability": 0.8242498636245728,
+    "partial_token_probability_mean_diagnostic": 0.8242498636245728,
+    "generated_token_ids": [
+      90,
+      18,
+      630
+    ],
+    "selected_token_probabilities": [
+      0.9997856020927429,
+      0.5092296004295349,
+      0.9637343883514404
+    ],
+    "generated_text": "{3}\n\n",
+    "generated_tokens": 3,
+    "inserted_suffix": "\n\n Final Answer\n\n \\boxed",
+    "inserted_suffix_token_ids": [
+      271,
+      13023,
+      21806,
+      271,
+      1124,
+      79075
+    ],
+    "prefill_input_tokens": 4164,
+    "seconds_including_independent_prefill": 1.4018254037946463,
+    "confidence_scope": "All generated tokens up to and including first balanced box closure, including generated opening/closing format and any characters in the closure token. Empty/truncated boxes have C=null. Not semantic correctness probability.",
+    "format_diagnostic": {
+      "token_text_pieces": [
+        "{",
+        "3",
+        "}\n\n"
+      ],
+      "strict_content_C": 0.5092296004295349,
+      "strict_content_definition": "Arithmetic mean only over generated token spans fully inside the first outer boxed answer; opening/closing or mixed delimiter/content tokens excluded. Secondary diagnostic, not official ASAG confidence.",
+      "strict_content_token_indices": [
+        1
+      ],
+      "excluded_mixed_token_indices": [],
+      "generated_token_character_spans": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "answer_content_generated_character_span": [
+        1,
+        2
+      ],
+      "strict_content_character_coverage": 1.0,
+      "strict_content_token_count": 1,
+      "generated_token_count": 3
+    },
+    "closure_token_probability": 0.9637343883514404
+  },
+  "canary_probe_comparison": {
+    "passed": true,
+    "confidence_available_in_both_probes": true,
+    "generated_token_ids_agree": true,
+    "statuses_agree": true,
+    "max_aligned_token_probability_difference": 6.556510925292969e-07,
+    "C_absolute_difference": 1.5894571936403423e-07,
+    "max_allowed_token_probability_difference": 0.01,
+    "interpretation": "Engineering check of full greedy probes across chunk sizes; matching empty/truncated probes may be numerically consistent but still have C=null and are not usable answers."
+  },
+  "measurement_seconds_excluding_canary_audit": 2.70659183524549,
+  "peak_allocated_gib": 7.072235584259033,
+  "peak_reserved_gib": 7.359375,
+  "peak_memory_includes_canary_audit": true,
+  "canary_resource_gate": {
+    "passed": true,
+    "point_seconds_including_audit": 6.914936283603311,
+    "peak_allocated_fraction_of_total_memory": 0.30073530294398565,
+    "max_seconds": 120.0,
+    "max_memory_fraction": 0.85,
+    "interpretation": "Resource controls evaluated after the canary finishes, not a hard timeout or scientific policy threshold. Includes extra chunk audits; excludes model loading."
+  },
+  "delta_reference_cut": 1041,
+  "delta_reference_is_first_selected_chronological_point_not_first_ATP": true,
+  "relative_changes": {
+    "raw_tail32": {
+      "normalized_H": 0.07697058680828618,
+      "raw_entropy_sum": 0.282129947893703,
+      "normalization_denominator_log_keys": 8.332789468417959
+    },
+    "asag_style_probe_window": {
+      "normalized_H": 0.05020122075677523,
+      "raw_entropy_sum": 0.24950285164415992,
+      "normalization_denominator_log_keys": 8.33423142973486
+    }
+  }
+}

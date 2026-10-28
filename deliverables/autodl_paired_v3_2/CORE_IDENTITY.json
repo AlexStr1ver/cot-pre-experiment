@@ -1,0 +1,30 @@
+{
+  "date_beijing": "2026-10-28",
+  "scientific_protocol_unchanged": true,
+  "unchanged_scientific_files": [
+    "actions.py",
+    "decoder.py",
+    "collect_phase2.py",
+    "v1_core.py",
+    "prepare_plan.py"
+  ],
+  "original_six_files_all_byte_identical": false,
+  "coordinator_change_scope": "hardware compatibility, exact approved fingerprint migration, provenance logging only",
+  "code_sha256": {
+    "paired_experiment.py": "64fd3fd448b5a76c87e06429a6ce934e39b3ba3c400da5708e16c4b55c80cced",
+    "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+    "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+    "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+    "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+    "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478",
+    "hardware_compatibility.py": "d7804135a6d2fc28b36feb60af2dd435d649161d0f85aef3f828caa325f84245",
+    "resume_compatibility.py": "648c3279ab10d4e1963f4decd5d81ef221a80dc4b411c7dd948b25b507ce6e2a"
+  },
+  "original_main_experiment_fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+  "new_experiment_fingerprint_for_frozen_main_identity": "a0220d2a407d82f4158b695dd4cc4662c0ec10226aeb8a79bb747f88cccdc57d",
+  "successful_main_source": "/root/autodl-tmp/infty_paired_v3_kt2eZTc2",
+  "failed_runs_not_resume_sources": [
+    "infty_paired_v3_gddcYOhk",
+    "infty_paired_v3_FCuKe8gI"
+  ]
+}

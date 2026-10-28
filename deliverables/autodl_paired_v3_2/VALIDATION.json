@@ -1,0 +1,43 @@
+{
+  "date_beijing": "2026-10-28",
+  "package": "autodl_paired_v3_2",
+  "full_CPU_and_lifecycle_suite": {
+    "passed": 70,
+    "failed": 0,
+    "seconds": 40.563
+  },
+  "categories": {
+    "original_core": 24,
+    "environment_probe": 7,
+    "environment_routing": 10,
+    "capacity_compatibility": 8,
+    "provenance_and_resume": 11,
+    "legacy_lifecycle": 5,
+    "recovery_lifecycle": 5
+  },
+  "actual_isolated_runtime_suite": {
+    "passed": 43,
+    "failed": 0,
+    "seconds": 0.289
+  },
+  "runtime_AutoDL_CPU_tests": 43,
+  "failed_actual_probe_replay_passes": true,
+  "actual_completed_main_records_validated": 18,
+  "actual_tokenizer_and_nine_prefixes_verified": true,
+  "new_schedule": {
+    "branches": 36,
+    "seeds": [
+      2027,
+      2028
+    ],
+    "overlaps_old_seed2026": false
+  },
+  "five_scientific_files_and_PROTOCOL_unchanged": true,
+  "coordinator_has_new_truthful_fingerprint": true,
+  "new_same_version_partial_resume_tested": true,
+  "old_artifacts_unchanged_after_read_only_audit": true,
+  "shell_syntax": "bash -n run_paired.sh launch_paired.sh passed",
+  "CUDA_install_executed": false,
+  "actual_new_GPU_inference_executed": false,
+  "limitations": "CPU and fixture tests plus read-only replay of uploaded metadata; the actual AutoDL environment and three H/C numerical audits must still pass before new model branches. Same GPU model metadata does not prove same physical GPU."
+}
