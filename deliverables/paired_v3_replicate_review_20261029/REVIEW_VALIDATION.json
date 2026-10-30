@@ -1,0 +1,11 @@
+{
+  "date_beijing": "2026-10-29",
+  "all_54_manual_grades_match_independent_recalculation": true,
+  "all_54_source_hashes_match_manual_annotations": true,
+  "engineering_exact_replay_and_integrity_audit_reproduced": true,
+  "summary_recalculation_matches": true,
+  "analysis_output_inside_raw_run_rejected": true,
+  "raw_summary_unchanged": true,
+  "new_uploaded_archive_sha256": "cc7227c8066fab8f754e15b53021b82461e703abf52f45b4a99b5a62f3420c01",
+  "no_new_GPU_inference": true
+}

@@ -1,0 +1,4 @@
+﻿group,pairs,A_correct,B_correct,A_tokens,B_tokens,token_saving_fraction,A_branch_wall_sum,B_branch_wall_sum,B_forced_summary_successes,B_fallbacks,B_budget_truncations,both_correct,A_only_correct,B_only_correct,both_wrong
+2026,9,4,4,48743,41008,0.15868945284451097,1148.8586683040485,967.4588004611433,8,1,0,3,1,1,4
+2027,9,1,3,53080,58892,-0.10949510173323285,977.2315870821476,1083.7564381584525,8,1,1,1,0,2,6
+2028,9,3,4,77882,57176,0.26586374258493617,1436.7148310095072,1054.1622698009014,7,2,1,2,1,2,4

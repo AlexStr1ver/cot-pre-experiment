@@ -1,0 +1,391 @@
+{
+  "all": {
+    "pairs": 27,
+    "A_correct": 8,
+    "B_correct": 11,
+    "A_tokens": 179705,
+    "B_tokens": 157076,
+    "token_saving_fraction": 0.12592304053866055,
+    "A_branch_wall_sum": 3562.8050863957033,
+    "B_branch_wall_sum": 3105.377508420497,
+    "outcomes": {
+      "both_correct": 6,
+      "A_only_correct": 2,
+      "B_only_correct": 5,
+      "both_wrong": 14
+    },
+    "B_forced_summary_successes": 23,
+    "B_fallbacks": 4,
+    "B_budget_truncations": 2
+  },
+  "new36": {
+    "pairs": 18,
+    "A_correct": 4,
+    "B_correct": 7,
+    "A_tokens": 130962,
+    "B_tokens": 116068,
+    "token_saving_fraction": 0.11372764618744369,
+    "A_branch_wall_sum": 2413.946418091655,
+    "B_branch_wall_sum": 2137.918707959354,
+    "outcomes": {
+      "both_correct": 3,
+      "A_only_correct": 1,
+      "B_only_correct": 4,
+      "both_wrong": 10
+    },
+    "B_forced_summary_successes": 15,
+    "B_fallbacks": 3,
+    "B_budget_truncations": 2
+  },
+  "by_seed": {
+    "2026": {
+      "pairs": 9,
+      "A_correct": 4,
+      "B_correct": 4,
+      "A_tokens": 48743,
+      "B_tokens": 41008,
+      "token_saving_fraction": 0.15868945284451097,
+      "A_branch_wall_sum": 1148.8586683040485,
+      "B_branch_wall_sum": 967.4588004611433,
+      "outcomes": {
+        "both_correct": 3,
+        "A_only_correct": 1,
+        "B_only_correct": 1,
+        "both_wrong": 4
+      },
+      "B_forced_summary_successes": 8,
+      "B_fallbacks": 1,
+      "B_budget_truncations": 0
+    },
+    "2027": {
+      "pairs": 9,
+      "A_correct": 1,
+      "B_correct": 3,
+      "A_tokens": 53080,
+      "B_tokens": 58892,
+      "token_saving_fraction": -0.10949510173323285,
+      "A_branch_wall_sum": 977.2315870821476,
+      "B_branch_wall_sum": 1083.7564381584525,
+      "outcomes": {
+        "both_correct": 1,
+        "A_only_correct": 0,
+        "B_only_correct": 2,
+        "both_wrong": 6
+      },
+      "B_forced_summary_successes": 8,
+      "B_fallbacks": 1,
+      "B_budget_truncations": 1
+    },
+    "2028": {
+      "pairs": 9,
+      "A_correct": 3,
+      "B_correct": 4,
+      "A_tokens": 77882,
+      "B_tokens": 57176,
+      "token_saving_fraction": 0.26586374258493617,
+      "A_branch_wall_sum": 1436.7148310095072,
+      "B_branch_wall_sum": 1054.1622698009014,
+      "outcomes": {
+        "both_correct": 2,
+        "A_only_correct": 1,
+        "B_only_correct": 2,
+        "both_wrong": 4
+      },
+      "B_forced_summary_successes": 7,
+      "B_fallbacks": 2,
+      "B_budget_truncations": 1
+    }
+  },
+  "by_state": {
+    "1/1041": {
+      "pairs": 3,
+      "A_correct": 0,
+      "B_correct": 0,
+      "A_tokens": 12413,
+      "B_tokens": 26597,
+      "token_saving_fraction": -1.142673004108596,
+      "A_branch_wall_sum": 245.81765666045249,
+      "B_branch_wall_sum": 519.0111236367375,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 0,
+        "B_only_correct": 0,
+        "both_wrong": 3
+      },
+      "B_forced_summary_successes": 2,
+      "B_fallbacks": 1,
+      "B_budget_truncations": 1
+    },
+    "1/2104": {
+      "pairs": 3,
+      "A_correct": 0,
+      "B_correct": 0,
+      "A_tokens": 25658,
+      "B_tokens": 13654,
+      "token_saving_fraction": 0.4678462857588277,
+      "A_branch_wall_sum": 488.4652394009754,
+      "B_branch_wall_sum": 272.31384753715247,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 0,
+        "B_only_correct": 0,
+        "both_wrong": 3
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "1/4103": {
+      "pairs": 3,
+      "A_correct": 0,
+      "B_correct": 1,
+      "A_tokens": 16423,
+      "B_tokens": 7996,
+      "token_saving_fraction": 0.5131218413200999,
+      "A_branch_wall_sum": 326.07346162199974,
+      "B_branch_wall_sum": 162.13465704675764,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 2
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "6/1055": {
+      "pairs": 3,
+      "A_correct": 1,
+      "B_correct": 1,
+      "A_tokens": 30709,
+      "B_tokens": 33781,
+      "token_saving_fraction": -0.10003582011788081,
+      "A_branch_wall_sum": 607.3460070220754,
+      "B_branch_wall_sum": 674.2301723314449,
+      "outcomes": {
+        "both_correct": 1,
+        "A_only_correct": 0,
+        "B_only_correct": 0,
+        "both_wrong": 2
+      },
+      "B_forced_summary_successes": 0,
+      "B_fallbacks": 3,
+      "B_budget_truncations": 0
+    },
+    "6/2092": {
+      "pairs": 3,
+      "A_correct": 1,
+      "B_correct": 1,
+      "A_tokens": 21388,
+      "B_tokens": 21333,
+      "token_saving_fraction": 0.0025715354404338697,
+      "A_branch_wall_sum": 421.7209350420162,
+      "B_branch_wall_sum": 430.21956578828394,
+      "outcomes": {
+        "both_correct": 1,
+        "A_only_correct": 0,
+        "B_only_correct": 0,
+        "both_wrong": 2
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "6/4203": {
+      "pairs": 3,
+      "A_correct": 0,
+      "B_correct": 1,
+      "A_tokens": 23804,
+      "B_tokens": 17838,
+      "token_saving_fraction": 0.250630146193917,
+      "A_branch_wall_sum": 478.429761168547,
+      "B_branch_wall_sum": 346.9347174623981,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 2
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "8/1084": {
+      "pairs": 3,
+      "A_correct": 1,
+      "B_correct": 2,
+      "A_tokens": 16419,
+      "B_tokens": 12513,
+      "token_saving_fraction": 0.2378951215055728,
+      "A_branch_wall_sum": 338.95258448831737,
+      "B_branch_wall_sum": 242.28266411274672,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 1,
+        "B_only_correct": 2,
+        "both_wrong": 0
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "8/2055": {
+      "pairs": 3,
+      "A_correct": 2,
+      "B_correct": 3,
+      "A_tokens": 22569,
+      "B_tokens": 5768,
+      "token_saving_fraction": 0.7444281979706677,
+      "A_branch_wall_sum": 446.5087250424549,
+      "B_branch_wall_sum": 123.52592859137803,
+      "outcomes": {
+        "both_correct": 2,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 0
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "8/4173": {
+      "pairs": 3,
+      "A_correct": 3,
+      "B_correct": 2,
+      "A_tokens": 10322,
+      "B_tokens": 17596,
+      "token_saving_fraction": -0.7047083898469289,
+      "A_branch_wall_sum": 209.49071594886482,
+      "B_branch_wall_sum": 334.7248319135979,
+      "outcomes": {
+        "both_correct": 2,
+        "A_only_correct": 1,
+        "B_only_correct": 0,
+        "both_wrong": 0
+      },
+      "B_forced_summary_successes": 3,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 1
+    }
+  },
+  "by_case": {
+    "1": {
+      "pairs": 9,
+      "A_correct": 0,
+      "B_correct": 1,
+      "A_tokens": 54494,
+      "B_tokens": 48247,
+      "token_saving_fraction": 0.11463647374022823,
+      "A_branch_wall_sum": 1060.3563576834276,
+      "B_branch_wall_sum": 953.4596282206476,
+      "outcomes": {
+        "both_correct": 0,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 8
+      },
+      "B_forced_summary_successes": 8,
+      "B_fallbacks": 1,
+      "B_budget_truncations": 1
+    },
+    "6": {
+      "pairs": 9,
+      "A_correct": 2,
+      "B_correct": 3,
+      "A_tokens": 75901,
+      "B_tokens": 72952,
+      "token_saving_fraction": 0.03885324304027615,
+      "A_branch_wall_sum": 1507.4967032326385,
+      "B_branch_wall_sum": 1451.384455582127,
+      "outcomes": {
+        "both_correct": 2,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 6
+      },
+      "B_forced_summary_successes": 6,
+      "B_fallbacks": 3,
+      "B_budget_truncations": 0
+    },
+    "8": {
+      "pairs": 9,
+      "A_correct": 6,
+      "B_correct": 7,
+      "A_tokens": 49310,
+      "B_tokens": 35877,
+      "token_saving_fraction": 0.27241938754816464,
+      "A_branch_wall_sum": 994.9520254796371,
+      "B_branch_wall_sum": 700.5334246177226,
+      "outcomes": {
+        "both_correct": 4,
+        "A_only_correct": 2,
+        "B_only_correct": 3,
+        "both_wrong": 0
+      },
+      "B_forced_summary_successes": 9,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 1
+    }
+  },
+  "by_target": {
+    "1024": {
+      "pairs": 9,
+      "A_correct": 2,
+      "B_correct": 3,
+      "A_tokens": 59541,
+      "B_tokens": 72891,
+      "token_saving_fraction": -0.22421524663677128,
+      "A_branch_wall_sum": 1192.1162481708452,
+      "B_branch_wall_sum": 1435.523960080929,
+      "outcomes": {
+        "both_correct": 1,
+        "A_only_correct": 1,
+        "B_only_correct": 2,
+        "both_wrong": 5
+      },
+      "B_forced_summary_successes": 5,
+      "B_fallbacks": 4,
+      "B_budget_truncations": 1
+    },
+    "2048": {
+      "pairs": 9,
+      "A_correct": 3,
+      "B_correct": 4,
+      "A_tokens": 69615,
+      "B_tokens": 40755,
+      "token_saving_fraction": 0.4145658263305322,
+      "A_branch_wall_sum": 1356.6948994854465,
+      "B_branch_wall_sum": 826.0593419168144,
+      "outcomes": {
+        "both_correct": 3,
+        "A_only_correct": 0,
+        "B_only_correct": 1,
+        "both_wrong": 5
+      },
+      "B_forced_summary_successes": 9,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 0
+    },
+    "4096": {
+      "pairs": 9,
+      "A_correct": 3,
+      "B_correct": 4,
+      "A_tokens": 50549,
+      "B_tokens": 43430,
+      "token_saving_fraction": 0.1408336465607628,
+      "A_branch_wall_sum": 1013.9939387394115,
+      "B_branch_wall_sum": 843.7942064227536,
+      "outcomes": {
+        "both_correct": 2,
+        "A_only_correct": 1,
+        "B_only_correct": 2,
+        "both_wrong": 4
+      },
+      "B_forced_summary_successes": 9,
+      "B_fallbacks": 0,
+      "B_budget_truncations": 1
+    }
+  },
+  "inferential_scope": "Three previously explored development questions, nine fixed prefixes, three seeds, 27 correlated pairs. No population noninferiority, significance or online speedup claim. Timing aggregate crosses two execution sessions, retain run-level reporting. C values are reused deterministic probes, not independently replicated."
+}

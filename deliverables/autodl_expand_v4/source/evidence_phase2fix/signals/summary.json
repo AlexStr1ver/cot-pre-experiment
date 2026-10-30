@@ -1,0 +1,14 @@
+{
+  "completed": true,
+  "planned_positions": 9,
+  "executed_positions": 9,
+  "canary_passed": true,
+  "actual_gpu_validation_done_by_this_run": true,
+  "stage": "completed",
+  "model_load_seconds": 3.839775323867798,
+  "current_case": 8,
+  "current_cut": 4173,
+  "measurement_seconds_sum_excluding_canary_audit": 13.017868980765343,
+  "canary_audit_seconds_sum": 4.197101403027773,
+  "closed_nonempty_probes": 9
+}

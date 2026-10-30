@@ -1,0 +1,287 @@
+{
+  "date_beijing": "2026-10-29",
+  "engineering_passed": true,
+  "code_files_byte_identical_to_delivery": 50,
+  "autodl_CPU_tests_passed": 43,
+  "exit_status": 0,
+  "all_old_and_new_record_sha_and_accounting_validated": 54,
+  "all_old_and_new_actions_replayed_exact_token_stream_without_inference": 54,
+  "new": {
+    "branches": 36,
+    "statuses": {
+      "final_output_review_required": 34,
+      "generation_budget_limit": 2
+    },
+    "answer_completed": 34,
+    "extra_generated_tokens": 247030,
+    "branch_wall_seconds": 4551.865126051009,
+    "events": 81,
+    "summary_restarts": 42,
+    "max_peak_allocated_gib": 7.11410665512085,
+    "max_peak_reserved_gib": 8.041015625,
+    "forced_summary_attempts": 18,
+    "forced_summary_successes": 15,
+    "forced_summary_fallbacks": [
+      {
+        "key": "case_006_cut_01055_seed_2027_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 11652,
+        "answer_completed": true
+      },
+      {
+        "key": "case_001_cut_01041_seed_2028_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 5654,
+        "answer_completed": true
+      },
+      {
+        "key": "case_006_cut_01055_seed_2028_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 12389,
+        "answer_completed": true
+      }
+    ],
+    "incomplete_answers": [
+      {
+        "key": "case_001_cut_01041_seed_2027_B_summary",
+        "status": "generation_budget_limit",
+        "tokens": 15343,
+        "budget": 15343,
+        "candidate_boxed": null,
+        "last_event_status": "generation_budget_limit"
+      },
+      {
+        "key": "case_008_cut_04173_seed_2028_B_summary",
+        "status": "generation_budget_limit",
+        "tokens": 12211,
+        "budget": 12211,
+        "candidate_boxed": null,
+        "last_event_status": "generation_budget_limit"
+      }
+    ]
+  },
+  "old": {
+    "branches": 18,
+    "statuses": {
+      "final_output_review_required": 18
+    },
+    "answer_completed": 18,
+    "extra_generated_tokens": 89751,
+    "branch_wall_seconds": 2116.3174687651917,
+    "events": 36,
+    "summary_restarts": 17,
+    "max_peak_allocated_gib": 7.090775489807129,
+    "max_peak_reserved_gib": 7.955078125,
+    "forced_summary_attempts": 9,
+    "forced_summary_successes": 8,
+    "forced_summary_fallbacks": [
+      {
+        "key": "case_006_cut_01055_seed_2026_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 9740,
+        "answer_completed": true
+      }
+    ],
+    "incomplete_answers": []
+  },
+  "combined": {
+    "branches": 54,
+    "statuses": {
+      "final_output_review_required": 52,
+      "generation_budget_limit": 2
+    },
+    "answer_completed": 52,
+    "extra_generated_tokens": 336781,
+    "branch_wall_seconds": 6668.1825948162,
+    "events": 117,
+    "summary_restarts": 59,
+    "max_peak_allocated_gib": 7.11410665512085,
+    "max_peak_reserved_gib": 8.041015625,
+    "forced_summary_attempts": 27,
+    "forced_summary_successes": 23,
+    "forced_summary_fallbacks": [
+      {
+        "key": "case_006_cut_01055_seed_2026_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 9740,
+        "answer_completed": true
+      },
+      {
+        "key": "case_006_cut_01055_seed_2027_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 11652,
+        "answer_completed": true
+      },
+      {
+        "key": "case_001_cut_01041_seed_2028_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 5654,
+        "answer_completed": true
+      },
+      {
+        "key": "case_006_cut_01055_seed_2028_B_summary",
+        "forced_status": "summary_token_limit",
+        "forced_tokens": 1024,
+        "branch_tokens": 12389,
+        "answer_completed": true
+      }
+    ],
+    "incomplete_answers": [
+      {
+        "key": "case_001_cut_01041_seed_2027_B_summary",
+        "status": "generation_budget_limit",
+        "tokens": 15343,
+        "budget": 15343,
+        "candidate_boxed": null,
+        "last_event_status": "generation_budget_limit"
+      },
+      {
+        "key": "case_008_cut_04173_seed_2028_B_summary",
+        "status": "generation_budget_limit",
+        "tokens": 12211,
+        "budget": 12211,
+        "candidate_boxed": null,
+        "last_event_status": "generation_budget_limit"
+      }
+    ]
+  },
+  "forced_fallback_exact_equivalence": [
+    {
+      "B_key": "case_006_cut_01055_seed_2026_B_summary",
+      "continuation_inputs_seeds_and_outputs_identical_to_A": true,
+      "B_minus_A_generated_tokens": 1024
+    },
+    {
+      "B_key": "case_006_cut_01055_seed_2027_B_summary",
+      "continuation_inputs_seeds_and_outputs_identical_to_A": true,
+      "B_minus_A_generated_tokens": 1024
+    },
+    {
+      "B_key": "case_001_cut_01041_seed_2028_B_summary",
+      "continuation_inputs_seeds_and_outputs_identical_to_A": true,
+      "B_minus_A_generated_tokens": 1024
+    },
+    {
+      "B_key": "case_006_cut_01055_seed_2028_B_summary",
+      "continuation_inputs_seeds_and_outputs_identical_to_A": true,
+      "B_minus_A_generated_tokens": 1024
+    }
+  ],
+  "numerical_audits": [
+    {
+      "case": 1,
+      "cut": 4103,
+      "passed": true,
+      "seconds": 7.1189477145671844,
+      "peak_allocated_fraction": 0.30073530294398565,
+      "max_chunk_H_rel": 4.538282816813418e-08,
+      "max_chunk_mean_logit_abs": 2.524956471461337e-06,
+      "cross_phase2_H_rel": {
+        "raw_tail32": 0.0,
+        "asag_style_probe_window": 0.0
+      },
+      "cross_phase2_C_abs": 0.0
+    },
+    {
+      "case": 6,
+      "cut": 4203,
+      "passed": true,
+      "seconds": 6.8818870559334755,
+      "peak_allocated_fraction": 0.302013020414281,
+      "max_chunk_H_rel": 7.196447927944875e-08,
+      "max_chunk_mean_logit_abs": 1.8950870526168728e-06,
+      "cross_phase2_H_rel": {
+        "raw_tail32": 0.0,
+        "asag_style_probe_window": 0.0
+      },
+      "cross_phase2_C_abs": 0.0
+    },
+    {
+      "case": 8,
+      "cut": 4173,
+      "passed": true,
+      "seconds": 6.816358208656311,
+      "peak_allocated_fraction": 0.30108840181134405,
+      "max_chunk_H_rel": 3.465217792261808e-08,
+      "max_chunk_mean_logit_abs": 2.6401467039249837e-06,
+      "cross_phase2_H_rel": {
+        "raw_tail32": 0.0,
+        "asag_style_probe_window": 0.0
+      },
+      "cross_phase2_C_abs": 0.0
+    }
+  ],
+  "fingerprint_bridge": {
+    "policy": "known_v3_identity_to_v3_2_capacity_compatibility_v1",
+    "prior_experiment_fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+    "current_experiment_fingerprint": "a0220d2a407d82f4158b695dd4cc4662c0ec10226aeb8a79bb747f88cccdc57d",
+    "current_code_sha256": {
+      "paired_experiment.py": "64fd3fd448b5a76c87e06429a6ce934e39b3ba3c400da5708e16c4b55c80cced",
+      "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+      "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+      "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+      "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+      "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478",
+      "hardware_compatibility.py": "d7804135a6d2fc28b36feb60af2dd435d649161d0f85aef3f828caa325f84245",
+      "resume_compatibility.py": "648c3279ab10d4e1963f4decd5d81ef221a80dc4b411c7dd948b25b507ce6e2a"
+    },
+    "prior_metadata_modified": false,
+    "mode": "known_legacy_v3_to_v3_2",
+    "changed_code_files": [
+      "paired_experiment.py"
+    ],
+    "added_code_files": [
+      "hardware_compatibility.py",
+      "resume_compatibility.py"
+    ],
+    "unchanged_scientific_code_files": [
+      "actions.py",
+      "decoder.py",
+      "collect_phase2.py",
+      "v1_core.py",
+      "prepare_plan.py"
+    ],
+    "prior_coordinator_sha256": "3cc9f570b8ba8e06c4452134602838f0128a3e9958bbdf27f819997e968aaff1",
+    "current_coordinator_sha256": "64fd3fd448b5a76c87e06429a6ce934e39b3ba3c400da5708e16c4b55c80cced",
+    "unchanged_identity_fields": [
+      "model_tokenizer_metadata_sha256",
+      "phase2_manifest_sha256",
+      "plan_sha256",
+      "protocol",
+      "weights"
+    ]
+  },
+  "hardware_compatibility": {
+    "policy": "same_runtime_and_gpu_model_capacity_16MiB_and_0.1percent_v1",
+    "compatible": true,
+    "mismatches": [],
+    "memory_capacity_check": {
+      "enabled": true,
+      "expected": 25252724736,
+      "actual": 25250627584,
+      "signed_delta_bytes": -2097152,
+      "absolute_delta_bytes": 2097152,
+      "max_allowed_delta_bytes": 16777216,
+      "absolute_limit_bytes": 16777216,
+      "relative_limit_denominator": 1000,
+      "passed": true,
+      "basis": "driver_reported_total_memory_not_free_memory",
+      "reason": "within_bounded_tolerance"
+    }
+  },
+  "environment_selection": "existing_healthy",
+  "original_results_unchanged": true,
+  "limitations": [
+    "Replay verifies state-machine transitions and parsing/accounting of saved tokens; it does not regenerate token probabilities or prove stochastic samples independently.",
+    "Raw logits are not serialized; chunk logit gate uses returned numerical audit telemetry.",
+    "GPU model/runtime matches plus numeric canaries do not establish same physical GPU or identical performance; compare costs within paired runs and prefer token cost for merged descriptive statistics.",
+    "34 of 36 new branches finish with final EOS; two budget-truncated outcomes must remain failures in strict answer correctness."
+  ]
+}

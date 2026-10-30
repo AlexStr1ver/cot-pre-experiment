@@ -1,0 +1,97 @@
+{
+  "protocol": {
+    "name": "paired_actions_fp32_v3",
+    "total_generated_budget_including_shared_cut": 16384,
+    "forced_summary_budget": 1024,
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "dtype": "float32",
+    "attention_backend": "eager",
+    "tf32": false,
+    "prefill_chunk": 128,
+    "alternative_chunk": 64,
+    "heartbeat_tokens": 256,
+    "max_relative_H_difference": 0.01,
+    "max_mean_absolute_logit_difference": 0.05,
+    "max_token_probability_difference": 0.01,
+    "probe_tokens": 128,
+    "max_canary_seconds": 120.0,
+    "max_canary_allocated_fraction": 0.85,
+    "forced_failure_policy": "charge_failed_summary_then_continue_original_prefix",
+    "native_invalid_summary_policy": "retain_as_model_format_outcome_no_silent_retry",
+    "generation_stop": "EOS_or_total_generated_budget; valid_native_summary_resets_without_segment_limit",
+    "grading": "Strict completed-EOS result and budget-truncated final-region boxed candidate reported separately; noninteger boxes require review",
+    "seed_mapping": "actions.request_seed based on case,cut,replicate,role,index; no heartbeat reseeding",
+    "sampling_implementation": "decoder.py torch multinomial private generator; descending nucleus with shifted removal mask; no top_k"
+  },
+  "experiment_identity": {
+    "protocol": {
+      "name": "paired_actions_fp32_v3",
+      "total_generated_budget_including_shared_cut": 16384,
+      "forced_summary_budget": 1024,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "dtype": "float32",
+      "attention_backend": "eager",
+      "tf32": false,
+      "prefill_chunk": 128,
+      "alternative_chunk": 64,
+      "heartbeat_tokens": 256,
+      "max_relative_H_difference": 0.01,
+      "max_mean_absolute_logit_difference": 0.05,
+      "max_token_probability_difference": 0.01,
+      "probe_tokens": 128,
+      "max_canary_seconds": 120.0,
+      "max_canary_allocated_fraction": 0.85,
+      "forced_failure_policy": "charge_failed_summary_then_continue_original_prefix",
+      "native_invalid_summary_policy": "retain_as_model_format_outcome_no_silent_retry",
+      "generation_stop": "EOS_or_total_generated_budget; valid_native_summary_resets_without_segment_limit",
+      "grading": "Strict completed-EOS result and budget-truncated final-region boxed candidate reported separately; noninteger boxes require review",
+      "seed_mapping": "actions.request_seed based on case,cut,replicate,role,index; no heartbeat reseeding",
+      "sampling_implementation": "decoder.py torch multinomial private generator; descending nucleus with shifted removal mask; no top_k"
+    },
+    "code_sha256": {
+      "paired_experiment.py": "3cc9f570b8ba8e06c4452134602838f0128a3e9958bbdf27f819997e968aaff1",
+      "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+      "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+      "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+      "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+      "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478"
+    },
+    "weights": [
+      {
+        "name": "model.safetensors",
+        "bytes": 3554214720,
+        "sha256": "23ceffc06528eb4d552ea9df4b2ebb98616d6dc8bd1b9d79966e240ca98a42ce"
+      }
+    ],
+    "plan_sha256": "583b39e0d13d80b1e3ca15ec40d2cdb3fb55f92545dab402bfc855aad9517b9a",
+    "phase2_manifest_sha256": "d43883d720e543c18127ebaf27f308331b09ae573d29486fe4ade1d1af501c9a",
+    "model_tokenizer_metadata_sha256": {
+      "config.json": "87ba0da62bf09bf44fb3e5d2819c7c13d9a4ef4e2dc6518dc2c97b390e9550af",
+      "tokenizer.json": "cd74964c346465e86c38389a6bf341430decb2861be32d4d2f36c1aa4fb4c516",
+      "tokenizer_config.json": "5b15590bba46256173120a0e042ae1450dbf94160e62ec25709430e18cdcbde9",
+      "special_tokens_map.json": "59cda48bbe8bab9d61ffb410e6e3c07b6d98bff73cee7c88ff8b51f95f21ab1c",
+      "chat_template.jinja": "b6835114b7303ddd78919a82e4d9f7d8c26ed0d7dfc36beeb12d524f6144eab1"
+    }
+  },
+  "experiment_fingerprint": "bf70f0a22ca788257b5a305a843f12942cdab3d553ef625401c440e60c220858",
+  "hardware": {
+    "torch": "2.6.0+cu124",
+    "cuda_build": "12.4",
+    "device": "cuda",
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "capability": [
+      8,
+      9
+    ],
+    "total_bytes": 25252724736,
+    "bf16_supported_including_emulation": true,
+    "bf16_native_supported": true,
+    "note": "Native BF16 support is diagnostic metadata; FP32 mode does not require BF16. Do not compare wall-clock costs across GPU/dtype changes."
+  },
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "transformers": "4.51.3",
+  "mode": "main",
+  "fixture_note": "Verbatim identity/runtime fields from successful main kt2eZTc2; no weights or generated branches. Used only by CPU regression tests."
+}

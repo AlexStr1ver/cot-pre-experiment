@@ -1,0 +1,40 @@
+{
+  "date_beijing": "2026-10-29",
+  "actual_original_native20_and_tokenizer_verified": true,
+  "selected_cases": [
+    10,
+    11,
+    12,
+    15,
+    19
+  ],
+  "excluded_old_signal_action_cases": [
+    1,
+    6,
+    8
+  ],
+  "previous_common_eligibility_recomputed": [
+    1,
+    6,
+    8,
+    10,
+    11,
+    12,
+    15,
+    19
+  ],
+  "positions": 15,
+  "planned_branches": 60,
+  "seeds": [
+    2026,
+    2027
+  ],
+  "max_additional_generated_tokens": 837400,
+  "exact_original_prompt_reset_base_verified": true,
+  "five_scientific_files_byte_identical": true,
+  "generation_PROTOCOL_identical_to_v3": true,
+  "all_source_accepts_Python3_10_grammar": true,
+  "new_GPU_inference": false,
+  "actual_weight_hash_checked_in_cloud": false,
+  "note": "Cloud has actual tokenizer/config and saved prefixes but not weights. AutoDL will hash full weights before H/C and actions."
+}

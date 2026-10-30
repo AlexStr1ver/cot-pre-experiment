@@ -1,0 +1,160 @@
+--- v3.2/paired_experiment.py
++++ v4/expanded_experiment.py
+@@ -2 +2 @@
+-"""Frozen-prefix FP32 paired-action pilot. Not an online timing controller."""
++"""Five-question frozen-prefix expansion; fixed two-seed schedule, no online policy."""
+@@ -21 +20,0 @@
+-from resume_compatibility import CURRENT_CODE_FILES, fingerprint_bridge
+@@ -38 +37,10 @@
+-CODE_FILES = list(CURRENT_CODE_FILES)
++EXPANSION = {
++    'name': 'remaining_native20_common_cohort_v4',
++    'cases': [10,11,12,15,19], 'targets': [1024,2048,4096], 'seeds': [2026,2027],
++    'question_scope': 'Previously explored native20 development questions; new H/C action cohort, not held-out test',
++}
++CODE_FILES = ['expanded_experiment.py','actions.py','decoder.py','collect_phase2.py',
++              'v1_core.py','prepare_plan.py','prepare_expansion_evidence.py',
++              'hardware_compatibility.py','expansion_plan.json']
++EXPECTED_WEIGHTS = [{'name':'model.safetensors','bytes':3554214720,
++                     'sha256':'23ceffc06528eb4d552ea9df4b2ebb98616d6dc8bd1b9d79966e240ca98a42ce'}]
+@@ -71,2 +79,16 @@
+-    if not summary.get('completed') or summary.get('executed_positions') != 9 or not summary.get('canary_passed'):
+-        raise ValueError('Phase2 must be the completed nine-point FP32 run')
++    validate_frozen_plan(plan)
++    required = {'plan.json','weight_preflight.json','signals/run_config.json','signals/summary.json'} | {
++        f"signals/case_{x['case']:03d}_cut_{x['cut']:05d}.json" for x in plan['selected']}
++    if not required.issubset(manifest['files_sha256']):
++        raise ValueError('Expansion evidence manifest does not cover every required signal file')
++    weight_preflight = read(phase2/'weight_preflight.json')
++    if (weight_preflight.get('weights') != EXPECTED_WEIGHTS or
++            weight_preflight.get('plan_sha256') != file_sha(phase2/'plan.json') or
++            weight_preflight.get('tokenizer_and_fifteen_original_prefixes_verified') is not True):
++        raise ValueError('Expansion evidence lacks the frozen pre-signal weight/prefix audit')
++    if cfg.get('script_sha256') != file_sha(Path(__file__).with_name('collect_phase2.py')) or cfg.get('v1_core_sha256') != file_sha(Path(__file__).with_name('v1_core.py')):
++        raise ValueError('Signal collector implementation differs from the frozen expansion package')
++    if (not summary.get('completed') or summary.get('executed_positions') != 15 or
++            summary.get('planned_positions') != 15 or not summary.get('canary_passed') or
++            summary.get('actual_gpu_validation_done_by_this_run') is not True):
++        raise ValueError('Expansion signals must be the completed fifteen-point FP32 run')
+@@ -75,2 +96,0 @@
+-    if plan['cohort_cases'] != [1,6,8] or plan['targets'] != [1024,2048,4096] or len(plan['selected']) != 9:
+-        raise ValueError('This pilot is frozen to the existing three-by-three cohort')
+@@ -100 +120 @@
+-    if len(points) != 9 or {(p['case'],p['cut']) for p in points} != {(p['case'],p['cut']) for p in prepared}:
++    if len(points) != 15 or {(p['case'],p['cut']) for p in points} != {(p['case'],p['cut']) for p in prepared}:
+@@ -109,6 +129,17 @@
+-def schedule(candidates, mode):
+-    first = next(p for p in candidates if (p['case'],p['cut']) == (1,4103))
+-    order = [first] + [p for p in sorted(candidates,key=lambda x:(x['case'],x['cut'])) if p is not first]
+-    seeds = [2027,2028] if mode == 'replicate' else [2026]
+-    if mode == 'smoke':
+-        order = order[:1]
++def validate_frozen_plan(plan):
++    frozen = read(Path(__file__).with_name('expansion_plan.json'))
++    if (plan != frozen or plan['cohort_cases'] != EXPANSION['cases'] or
++            plan['targets'] != EXPANSION['targets'] or plan.get('replicate_seeds') != EXPANSION['seeds'] or
++            len(plan['selected']) != 15):
++        raise ValueError('Expansion plan differs from the frozen five-question fifteen-prefix plan')
++    return True
++
++
++def schedule(candidates, mode='expand'):
++    if mode != 'expand':
++        raise ValueError('Only the fixed expand mode is supported')
++    order = sorted(candidates,key=lambda x:(x['case'],x['cut']))
++    expected = {(case,target) for case in EXPANSION['cases'] for target in EXPANSION['targets']}
++    identities = [(p['case'],p['target']) for p in order]
++    if len(identities) != 15 or set(identities) != expected:
++        raise ValueError('Schedule needs exactly all fifteen frozen case/target states')
+@@ -116 +147 @@
+-    for rep_index, seed in enumerate(seeds):
++    for rep_index, seed in enumerate(EXPANSION['seeds']):
+@@ -156 +187,3 @@
+-def validate_prior(source, config, candidates, requested_mode):
++def validate_prior(source, config, candidates, requested_mode='expand'):
++    if requested_mode != 'expand':
++        raise ValueError('Expansion resume only accepts expand mode')
+@@ -159,3 +192,16 @@
+-    if artifacts.get('experiment_fingerprint') != prior.get('experiment_fingerprint'):
+-        raise ValueError('Prior artifact manifest identity differs')
+-    fingerprint_bridge(prior, config)
++    if prior.get('mode') != 'expand' or summary.get('mode') != 'expand':
++        raise ValueError('Only same-v4 expansion results can resume; old pilot branches are not reused')
++    for label, candidate_config in [('prior',prior),('current',config)]:
++        identity = candidate_config.get('experiment_identity')
++        if (not isinstance(identity,dict) or object_sha(identity) != candidate_config.get('experiment_fingerprint') or
++                identity.get('protocol') != candidate_config.get('protocol') or identity.get('protocol') != PROTOCOL or
++                identity.get('expansion') != EXPANSION or candidate_config.get('expansion') != EXPANSION or
++                identity.get('weights') != EXPECTED_WEIGHTS or
++                identity.get('plan_sha256') != file_sha(Path(__file__).with_name('expansion_plan.json'))):
++            raise ValueError(label+' expansion fingerprint/identity mismatch')
++    actual_code = {n:file_sha(Path(__file__).with_name(n)) for n in CODE_FILES}
++    if config['experiment_identity'].get('code_sha256') != actual_code:
++        raise ValueError('Current code hashes differ from the executing expansion package')
++    if (prior['experiment_fingerprint'] != config['experiment_fingerprint'] or
++            artifacts.get('experiment_fingerprint') != prior['experiment_fingerprint']):
++        raise ValueError('Prior expansion code/protocol/weights/plan/signals fingerprint differs; no reuse')
+@@ -167,10 +213,4 @@
+-    mode = prior['mode']
+-    if requested_mode == 'main':
+-        if mode not in ['smoke','main'] or (mode == 'smoke' and not summary.get('completed')):
+-            raise ValueError('Main needs a completed smoke or compatible interrupted/completed main')
+-    elif requested_mode == 'replicate':
+-        if mode not in ['main','replicate'] or (mode == 'main' and not summary.get('completed')):
+-            raise ValueError('Replicates require completed main, or a compatible replicate resumption')
+-    else:
+-        raise ValueError('Smoke cannot reuse prior branches')
+-    prior_jobs = schedule(candidates, mode)
++    prior_jobs = schedule(candidates)
++    expected_keys = {job_key(c,b,s) for c,b,s in prior_jobs}
++    if not set(artifacts.get('branches_sha256',{})).issubset(expected_keys):
++        raise ValueError('Prior artifact manifest contains unknown expansion branches')
+@@ -180,0 +221,2 @@
++            if key in artifacts.get('branches_sha256',{}):
++                raise ValueError('Previously committed completed branch is missing: '+key)
+@@ -183,0 +226,2 @@
++            if key in artifacts.get('branches_sha256',{}):
++                raise ValueError('Previously committed completed branch is now incomplete: '+key)
+@@ -191,5 +234,0 @@
+-    # Even an interrupted main must already contain the fixed smoke pair.
+-    if requested_mode == 'main':
+-        for candidate,branch,seed in schedule(candidates,'smoke'):
+-            if job_key(candidate,branch,seed) not in complete:
+-                raise ValueError('Prior fixed smoke pair is incomplete; return its error logs before expansion')
+@@ -225 +264 @@
+-        'note':'Same fixed prefixes and metadata; phase2 has no weight SHA, so this is numerical evidence, not cryptographic proof of old weight identity.'}
++        'note':'Same frozen expansion prefixes; sealed signal evidence includes pre-collection weight hashes. These checks independently test numerical consistency.'}
+@@ -297 +335,0 @@
+-    ap.add_argument('--mode',choices=['smoke','main','replicate'],default='smoke')
+@@ -299 +336,0 @@
+-    ap.add_argument('--prior-run',type=Path)
+@@ -301,2 +338 @@
+-    if (args.mode=='smoke' and (args.resume_from or args.prior_run)) or (args.mode=='main' and (not args.resume_from or args.prior_run)) or (args.mode=='replicate' and (not args.prior_run or args.resume_from)):
+-        ap.error('smoke: no prior; main: --resume-from required; replicate: --prior-run required')
++    args.mode = 'expand'
+@@ -329 +365,3 @@
+-        identity={'protocol':PROTOCOL,'code_sha256':{n:file_sha(Path(__file__).with_name(n)) for n in CODE_FILES},
++        if weights != EXPECTED_WEIGHTS:
++            raise ValueError('Local weights differ from the frozen InftyThink-1.5B content identity')
++        identity={'protocol':PROTOCOL,'expansion':EXPANSION,'code_sha256':{n:file_sha(Path(__file__).with_name(n)) for n in CODE_FILES},
+@@ -333 +371 @@
+-        config={'protocol':PROTOCOL,'experiment_fingerprint':object_sha(identity),'experiment_identity':identity,
++        config={'protocol':PROTOCOL,'expansion':EXPANSION,'experiment_fingerprint':object_sha(identity),'experiment_identity':identity,
+@@ -336 +374 @@
+-            'platform':platform.platform(),'transformers':transformers.__version__,'local_weight_identity_claim':'Content hashes fix this and future runs; historical phase2 weight revision and paper training stage are not independently proven.',
++            'platform':platform.platform(),'transformers':transformers.__version__,'local_weight_identity_claim':'Actual local content must match frozen model.safetensors SHA; correspondence to a paper training stage remains unproven.',
+@@ -339 +377,2 @@
+-            'not_online_controller':True,'no_new_training':True}
++            'not_online_controller':True,'no_new_training':True,
++            'scientific_generation_protocol_same_as_v3':True,'old_pilot_branches_reused':False}
+@@ -341 +380 @@
+-        source=args.resume_from or args.prior_run
++        source=args.resume_from
+@@ -350 +389,3 @@
+-                fingerprint_compatibility=fingerprint_bridge(prior,config),
++                fingerprint_compatibility={'mode':'identical_v4_expansion_identity',
++                    'prior_experiment_fingerprint':prior['experiment_fingerprint'],
++                    'current_experiment_fingerprint':config['experiment_fingerprint']},
+@@ -399 +440 @@
+-            record['branch_wall_scope']='Includes initialization/prefills/decode/resets/checkpoints; excludes model load, numerical audits, warmup and old phase2 signal replay.'
++            record['branch_wall_scope']='Includes initialization/prefills/decode/resets/checkpoints; excludes model load, numerical audits, warmup and separately recorded expansion H/C measurements.'

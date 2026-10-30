@@ -1,0 +1,40 @@
+{
+  "delivery_date_beijing": "2026-10-30",
+  "package": "autodl_expand_v4",
+  "full_CPU_and_lifecycle_suite": {
+    "passed": 94,
+    "failed": 0,
+    "seconds": 87.046
+  },
+  "categories": {
+    "original_generation_core": 24,
+    "environment_probe": 7,
+    "environment_routing": 10,
+    "capacity_compatibility": 8,
+    "old_v3_provenance_and_resume": 11,
+    "old_runner_lifecycle": 5,
+    "old_recovery_lifecycle": 5,
+    "expanded_coordinator": 10,
+    "expansion_evidence": 8,
+    "expansion_runner_lifecycle": 6
+  },
+  "actual_final_isolated_runtime_suite": {
+    "passed": 42,
+    "failed": 0,
+    "seconds": 0.612
+  },
+  "runtime_AutoDL_CPU_tests": 42,
+  "full_suite_followup_note": "After full suite, only branch_wall_scope explanatory text clarified to refer to new expansion H/C; final actual isolated42 passed. All behavior and thresholds unchanged.",
+  "exact_all60_synthetic_run_tested": true,
+  "synthetic_interrupted_resume_2_reused_58_new_tested": true,
+  "real_tokenizer_and_original15_prefixes_verified": true,
+  "known_full_weight_hash_checked_before_HC_and_actions_at_runtime": true,
+  "actual_full_weight_hash_checked_in_cloud": false,
+  "five_original_scientific_files_byte_identical": true,
+  "original_generation_PROTOCOL_unchanged": true,
+  "new_model_GPU_inference_executed_in_cloud": false,
+  "CUDA_install_executed_in_cloud": false,
+  "shell_syntax": "bash -n run_expanded.sh launch_expanded.sh passed",
+  "all_source_accepts_python3_10_grammar": true,
+  "limitations": "CPU fixtures and original tokenizer/prefix audits do not replace real AutoDL CUDA checks,15 signal measurements and five H/C numerical canaries. No claim new60GPU experiments already executed."
+}

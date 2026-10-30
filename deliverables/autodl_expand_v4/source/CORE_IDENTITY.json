@@ -1,0 +1,27 @@
+{
+  "date_beijing": "2026-10-29",
+  "package": "autodl_expand_v4",
+  "generation_protocol_same_as_v3": true,
+  "unchanged_scientific_files": [
+    "actions.py",
+    "decoder.py",
+    "collect_phase2.py",
+    "v1_core.py",
+    "prepare_plan.py"
+  ],
+  "code_sha256": {
+    "expanded_experiment.py": "e3527854b6e7506b6580ee48d097e5fe35892924c7ac4e8ba8d3a16c705cd6d4",
+    "actions.py": "46188b7d56846752964bf3fb762aa669d01fa2dbd4d90cd0cb4a3a4e4e008c78",
+    "decoder.py": "a0aeb2e9a1e9a2a9b6f3f0bf9fa53253d8efcec5dc5b2f397dc2d0c7671958e3",
+    "collect_phase2.py": "f24d4a37d2954c9b56c131ed1aac73f347f3a1359cace55321ecd586fc0b648e",
+    "v1_core.py": "09a4b5048aa261af6a408ca88f92c04e702a154cd774da27f34432f2000b3b66",
+    "prepare_plan.py": "dfdee24ec66ea0ce82a1b1614ce0ccef1be9cdebfd849c8ab84a2fd5a9e86478",
+    "prepare_expansion_evidence.py": "9aab9033fda1a2412019ddc9a6960a02ede3bcdaf712f0616cb850c02a35bca3",
+    "hardware_compatibility.py": "d7804135a6d2fc28b36feb60af2dd435d649161d0f85aef3f828caa325f84245",
+    "expansion_plan.json": "62b7942720a64e0e441f0755fe7ed12162152bf9429faef6b63900f556c616c1"
+  },
+  "fresh_experiment_fingerprint_requires_actual_collected_evidence": true,
+  "old_v3_branch_reuse_allowed": false,
+  "new_same_v4_branch_reuse_requires_exact_code_plan_weights_signal_identity": true,
+  "delivery_date_beijing": "2026-10-30"
+}
